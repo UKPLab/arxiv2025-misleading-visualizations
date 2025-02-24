@@ -11,6 +11,11 @@ Contact person: [Jonathan Tonglet](mailto:jonathan.tonglet@tu-darmstadt.de)
 
 Don't hesitate to send us an e-mail or report an issue, if something is broken (and it shouldn't be) or if you have further questions. 
 
+
+<p align="center">
+  <img width="80%" src="assets/accuracy.png" alt="header" />
+</p>
+
 ## Abstract 
 
 We assess the vulnerability of multimodal large language models to misleading visualizations - charts that distort the underlying data  using techniques such as truncated or inverted axes, leading readers to draw inaccurate conclusions that may support misinformation or conspiracy theories. Our analysis shows that these distortions severely harm multimodal large language models, reducing their question-answering accuracy by up to 34.8 percentage points compared to non-misleading visualizations and lowering it to the level of the random baseline. To mitigate this vulnerability, we introduce six inference-time methods to improve performance of MLLMs on misleading visualizations while preserving their accuracy on non-misleading ones. The most effective approach involves (1) extracting the underlying data table and (2) using a text-only large language model to answer questions based on the table. This method improves performance on misleading visualizations by 15.4 to 19.6 percentage points.
@@ -26,6 +31,10 @@ $ pip install -r requirements.txt
 ```
 
 ## Datasets
+
+<p align="center">
+  <img width="70%" src="assets/real_world_examples.png" alt="header" />
+</p>
 
 ### Prepare the datasets
 
