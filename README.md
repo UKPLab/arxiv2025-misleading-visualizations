@@ -13,7 +13,7 @@ Don't hesitate to send us an e-mail or report an issue, if something is broken (
 
 
 <p align="center">
-  <img width="80%" src="assets/accuracy.pdf" alt="header" />
+  <img width="80%" src="assets/accuracy.png" alt="header" />
 </p>
 
 ## Abstract 
@@ -33,7 +33,7 @@ $ pip install -r requirements.txt
 ## Datasets
 
 <p align="center">
-  <img width="70%" src="assets/real_world_examples.pdf" alt="header" />
+  <img width="70%" src="assets/real_world_examples.png" alt="header" />
 </p>
 
 ### Prepare the datasets
