@@ -1,0 +1,683 @@
+[
+    {   
+        "image_path": "real_world_images/000339_9661696d61b36996_inverted axis.jpg",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%202%3A%20Visualization%20Design/Choice%20of%20Axis/Inverted%20Axis/000339_9661696d61b36996_inverted%20axis.jpg",
+        "question": "What is the trend in the number of recovered cases from May till June?",
+        "choices": [
+            "Generally increasing",
+            "Generally decreasing",
+            "Cannot be inferred / Inadequate information"
+        ],
+        "best_answer": "Generally increasing",
+        "chart_type": "line",
+        "misleading_answer": "Generally decreasing",
+        "misleader": "Inverted axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/000371_d03fc0e83fc03dc5_inappropriate item order.png",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%201%3A%20Input/Lie%20with%20Stats/Inappropriate%20Item%20Order/000371_d03fc0e83fc03dc5_inappropriate%20item%20order.png",
+        "question": "Assuming we are May 10, which statement is correct regarding confirmed Covid-19 cases?",
+        "choices": [
+            "From April 26th to May 1st, confirmed cases in Fulton have been increasing then decreasing",
+            "The number of confirmed cases has been consistently decreasing in all counties over the last 3 days",
+            "Cases in Hall county were at their highest at the beginning of the measurement period",
+            "Confirmed ases have been increasing in DeKalb country from May 2nd to May 4th"
+        ],
+        "best_answer": "From April 26th to May 1st, confirmed cases in Fulton have been increasing then decreasing",
+        "chart_type": "bar",
+        "misleading_answer": [
+            "The number of confirmed cases has been consistently decreasing in all counties over the last 3 days",
+            "Cases in Hall county were at their highest at the beginning of the measurement period"
+        ],
+        "misleader": "Inappropriate item order",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/000500_b385cc69867a1b96_missing normalization-invalid comparison.png",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%201%3A%20Input/Lie%20with%20Stats/Missing%20Normalization/000500_b385cc69867a1b96_missing%20normalization-invalid%20comparison.png",
+        "question": "Which state has the most reported shark attacks per 10,000 people?",
+        "choices": [
+            "Cannot be inferred / Inadequate information",
+            "Florida",
+            "Hawaii",
+            "Texas"
+        ],
+        "best_answer": "Cannot be inferred / Inadequate information",
+        "chart_type": "bar",
+        "misleading_answer": "Florida",
+        "misleader": "Missing normalization",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/002752_85c2add9b0e62b4e_missing normalization-discretized continuous variable-ineffective color scheme.png",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%201%3A%20Input/Lie%20with%20Stats/Missing%20Normalization/002752_85c2add9b0e62b4e_missing%20normalization-discretized%20continuous%20variable-ineffective%20color%20scheme.png",
+        "question": "True or False: the USA have more coronavirus cases per inhabitant than Mongolia.",
+        "choices": [
+            "Cannot be inferred / Inadequate information",
+            "True",
+            "False"
+        ],
+        "best_answer": "Cannot be inferred / Inadequate information",
+        "chart_type": "map",
+        "misleading_answer": "True",
+        "misleader": "Missing normalization",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/000619_eac07535246de17a_selective data.png",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%201%3A%20Input/Garbage-In/Selective%20Data/000619_eac07535246de17a_selective%20data.png",
+        "question": "What is the trend in the UK national debt between 1990 and 2000?",
+        "choices": [
+            "Decreasing",
+            "Increasing",
+            "Constant",
+            "Cannot be inferred / Inadequate information"
+        ],
+        "best_answer": "Cannot be inferred / Inadequate information",
+        "chart_type": "line",
+        "misleading_answer": "Decreasing",
+        "misleader": "Cherry picking",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/003970_af21873f2f6828e1_selective data.png",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%201%3A%20Input/Garbage-In/Selective%20Data/003970_af21873f2f6828e1_selective%20data.png",
+        "question": "What is the trend in the global air temperature change in celsius between 1990 and 2000?",
+        "choices": [
+            "Decreasing",
+            "Increasing",
+            "Constant",
+            "Cannot be inferred / Inadequate information"
+        ],
+        "best_answer": "Cannot be inferred / Inadequate information",
+        "chart_type": "line",
+        "misleading_answer": [
+            "Constant", 
+            "Decreasing"
+        ],
+        "misleader": "Cherry picking",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/004667_fc3085c538d72a3e_selective data.jpg",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%201%3A%20Input/Garbage-In/Selective%20Data/004667_fc3085c538d72a3e_selective%20data.jpg",
+        "question": "Are there more deaths of coronavirus in Germany than in Asia?",
+        "choices": [
+            "Yes",
+            "No",
+            "Cannot be inferred / Inadequate information"
+        ],
+        "best_answer": "Cannot be inferred / Inadequate information",
+        "chart_type": "bar",
+        "misleading_answer": "Yes",
+        "misleader": "Cherry picking",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/000918_cc95b73e91686e48_truncated axis.png",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%202%3A%20Visualization%20Design/Choice%20of%20Axis/Truncated%20Axis/000918_cc95b73e91686e48_truncated%20axis.png",
+        "question": "What is the average house price of 2014 as a proportion of the one in 2015?",
+        "choices": [
+            "Around 33%",
+            "Around 66%",
+            "Around 99%",
+            "Around 50%"
+        ],
+        "best_answer": "Around 99%",
+        "chart_type": "bar",
+        "misleading_answer": "Around 33%",
+        "misleader": "Truncated axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/001031_d67a21856a855ade_misrepresentation.jpg",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%203%3A%20Plotting/Inconsistency/Misrepresentation/001031_d67a21856a855ade_misrepresentation.jpg",
+        "question": "Which meal is the most expensive in this menu?",
+        "choices": [
+            "Both MissFresh and ChefCookIt",
+            "MissFresh",
+            "Both Chef CookIt and Goodfood",
+            "Goodfood"
+        ],
+        "best_answer": "Both MissFresh and ChefCookIt",
+        "chart_type": "bar",
+        "misleading_answer": "MissFresh",
+        "misleader": "Misrepresentation",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/001535_9be4961be8ec911a_misrepresentation.jpg",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%203%3A%20Plotting/Inconsistency/Misrepresentation/001535_9be4961be8ec911a_misrepresentation.jpg",
+        "question": "Which statement is correct?",
+        "choices": [
+            "The most common age on entry is 26+",
+            "The most common age on entry is 21-25",
+            "The most common age on entry is 0-20"
+        ],
+        "best_answer": "The most common age on entry is 0-20",
+        "chart_type": "bar",
+        "misleading_answer": "The most common age on entry is 26+",
+        "misleader": "Misrepresentation",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/001642_bf363e35946cc0c8_inconsistent tick intervals-changing scale.png",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%203%3A%20Plotting/Inconsistency/Inconsistent%20Tick%20Intervals/001642_bf363e35946cc0c8_inconsistent%20tick%20intervals-changing%20scale.png",
+        "question": "Did carbon emissions grow faster from 1975 to 1976 than from 2011 to 2012.",
+        "choices": [
+            "Yes",
+            "No",
+            "Cannot be inferred / Inadequate information"
+        ],
+        "best_answer": "Cannot be inferred / Inadequate information",
+        "chart_type": "line",
+        "misleading_answer": "Yes",
+        "misleader": "Inconsistent tick intervals",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/002035_802b2f2b2f2b2f2b_inappropriate axis range.jpg",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%202%3A%20Visualization%20Design/Choice%20of%20Axis/Inappropriate%20Axis%20Range/002035_802b2f2b2f2b2f2b_inappropriate%20axis%20range.jpg",
+        "question": "What is the trend in the average global temperature per year from 1900 to 2000?",
+        "choices": [
+            "Generally increasing",
+            "Generally decreasing",
+            "Generally constant",
+            "Cannot be inferred / Inadequate information"
+        ],
+        "best_answer": "Generally increasing",
+        "chart_type": "line",
+        "misleading_answer": "Generally constant",
+        "misleader": "Inappropriate axis range",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/002067_af3a818d30b34f78_inverted axis.jpg",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%202%3A%20Visualization%20Design/Choice%20of%20Axis/Inverted%20Axis/002067_af3a818d30b34f78_inverted%20axis.jpg",
+        "question": "What was the general trend in gun deaths in Florida from 2003 to 2007?",
+        "choices": [
+            "Increasing then decreasing",
+            "Decreasing then increasing",
+            "Cannot be inferred / Inadequate information"
+        ],
+        "best_answer": "Decreasing then increasing",
+        "chart_type": "line",
+        "misleading_answer": "Increasing then decreasing",
+        "misleader": "Inverted axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/002413_a18cbf3b1c9b3298_trend line on random data.jpg",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%201%3A%20Input/Lie%20with%20Stats/Trend%20Line%20on%20Random%20Data/002413_a18cbf3b1c9b3298_trend%20line%20on%20random%20data.jpg",
+        "question": "Is there a positive relationship between the number of binge drinkers and the number of Covid cases in a state?",
+        "choices": [
+            "Cannot be inferred / Inadequate information",
+            "Yes",
+            "No"
+        ],
+        "best_answer": "Cannot be inferred / Inadequate information",
+        "chart_type": "line",
+        "misleading_answer": "Yes",
+        "misleader": "Inappropriate aggregation",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/002726_c264e9c93c368d2f_3d-inappropriate item order-truncated axis.png",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%201%3A%20Input/Lie%20with%20Stats/Inappropriate%20Item%20Order/002726_c264e9c93c368d2f_3d-inappropriate%20item%20order-truncated%20axis.png",
+        "question": "True or False: the temperatures have been continuously increasing between 1921 and 2012.",
+        "choices": [
+            "True",
+            "False",
+            "Cannot be inferred / Inadequate information"
+        ],
+        "best_answer": "False",
+        "chart_type": "bar",
+        "misleading_answer": "True",
+        "misleader": "Inappropriate item order",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/002983_a0a07fa0777f801f_inappropriate axis range.jpg",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%202%3A%20Visualization%20Design/Choice%20of%20Axis/Inappropriate%20Axis%20Range/002983_a0a07fa0777f801f_inappropriate%20axis%20range.jpg",
+        "question": "What is the trend in lifetime weight gain from 1958 to 1973?",
+        "choices": [
+            "Cannot be inferred / Inadequate information",
+            "Generally constant",
+            "Generally increasing",
+            "Generally decreasing"
+        ],
+        "best_answer": [
+            "Cannot be inferred / Inadequate information",
+            "Generally increasing"
+        ],
+        "chart_type": "line",
+        "misleading_answer": "Generally constant",
+        "misleader": "Inappropriate axis range",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/003327_b0cf9f9648c178c6_misrepresentation.jpg",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%203%3A%20Plotting/Inconsistency/Misrepresentation/003327_b0cf9f9648c178c6_misrepresentation.jpg",
+        "question": "What is the number of death of Covid-19 as a proportion of the number of cases?",
+        "choices": [
+            "Around 66%",
+            "Around 36%",
+            "Around 16%",
+            "Around 6%"
+        ],
+        "best_answer": "Around 6%",
+        "chart_type": "bar",
+        "misleading_answer": "Around 66%",
+        "misleader": "Misrepresentation",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/003868_ff80803f3e7ec848_inappropriate item order.jpg",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%201%3A%20Input/Lie%20with%20Stats/Inappropriate%20Item%20Order/003868_ff80803f3e7ec848_inappropriate%20item%20order.jpg",
+        "question": "The number of registered deaths was measured every year from 1993 until 2019, as shown in this bar chart. Which statement is correct about the data?",
+        "choices": [
+            "The number of registered deaths has continued to decrease each year.",
+            "The number of registered deaths has continued to increase each year.",
+            "The number of registered deaths peaked at the beginning of the 27 years of measurement",
+            "The number of registered deaths peaked at the end of the 27 years of measurement"
+        ],
+        "best_answer": "The number of registered deaths peaked at the beginning of the 27 years of measurement",
+        "chart_type": "bar",
+        "misleading_answer": [
+            "The number of registered deaths has continued to increase each year.",
+            "The number of registered deaths peaked at the end of the 27 years of measurement"
+        ],
+        "misleader": "Inappropriate item order",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/003879_fa35816896b17e07_pictorial area encoding.jpg",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%204%3A%20Perception/Visual%20Illusion/Pictorial%20Area%20Encoding/003879_fa35816896b17e07_pictorial%20area%20encoding.jpg",
+        "question": "How many candies did Shayna collect as a proportion of Michael?",
+        "choices": [
+            "Around 50%",
+            "Around 40%",
+            "Around 33%",
+            "Around 20%"
+        ],
+        "best_answer": "Around 50%",
+        "chart_type": "scatterplot",
+        "misleading_answer": [
+            "Around 20%", 
+            "Around 33%"
+        ],
+        "misleader": "Area encoding",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/003909_d4cf0bc06d369327_truncated axis.png",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%202%3A%20Visualization%20Design/Choice%20of%20Axis/Truncated%20Axis/003909_d4cf0bc06d369327_truncated%20axis.png",
+        "question": "What is the calories intake of KFC as a proportion of Burger King?",
+        "choices": [
+            "Around 40%",
+            "Around 50%",
+            "Around 75%",
+            "Around 90%"
+        ],
+        "best_answer": "Around 90%",
+        "chart_type": "bar",
+        "misleading_answer": "Around 50%",
+        "misleader": "Truncated axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/003964_855ab355ca2cfc25_misrepresentation.jpg",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%203%3A%20Plotting/Inconsistency/Misrepresentation/003964_855ab355ca2cfc25_misrepresentation.jpg",
+        "question": "What is the trend in petroleum prices over the years?",
+        "choices": [
+            "Increasing then decreasing",
+            "Decreasing then increasing",
+            "Increasing",
+            "Decreasing"
+        ],
+        "best_answer": "Increasing",
+        "chart_type": "bar",
+        "misleading_answer": "Increasing then decreasing",
+        "misleader": "Misrepresentation",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/003997_9fb1391f700fe0e0_inverted axis-missing legend.jpg",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%202%3A%20Visualization%20Design/Choice%20of%20Axis/Inverted%20Axis/003997_9fb1391f700fe0e0_inverted%20axis-missing%20legend.jpg",
+        "question": "Which statement is correct?",
+        "choices": [
+            "Turkey has a higher trade intensity with the EU than the UK",
+            "Turkey has a lower trade intensity with the EU than Switzerland",
+            "Japan is further away from the EU27 in kilometers than Mexico"
+        ],
+        "best_answer": "Turkey has a lower trade intensity with the EU than Switzerland",
+        "chart_type": "scatterplot",
+        "misleading_answer": "Turkey has a higher trade intensity with the EU than the UK",
+        "misleader": "Inverted axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/004096_c73139452f2b5b07_truncated axis.jpg",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%202%3A%20Visualization%20Design/Choice%20of%20Axis/Truncated%20Axis/004096_c73139452f2b5b07_truncated%20axis.jpg",
+        "question": "What is the female salary as a proportion of the male salary in the period 2012-2013?",
+        "choices": [
+            "Around 55%",
+            "Aroud 60%",
+            "Around 75%",
+            "Around 85%"
+        ],
+        "best_answer": "Around 75%",
+        "chart_type": "bar",
+        "misleading_answer": "Around 60%",
+        "misleader": "Truncated axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/005389_bf86e061d07ca45b_truncated axis.png",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%202%3A%20Visualization%20Design/Choice%20of%20Axis/Truncated%20Axis/005389_bf86e061d07ca45b_truncated%20axis.png",
+        "question": "What is the number of visitors at Arches NP as a proportion of Cuyaogha Valley NP in 2018?",
+        "choices": [
+            "Around 40%",
+            "Around 50%",
+            "Around 70%",
+            "Aroud 80%"
+        ],
+        "best_answer": "Around 80%",
+        "chart_type": "bar",
+        "misleading_answer": "Around 40%",
+        "misleader": "Truncated axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/003687_dac4ad31846ff11a_truncated axis.png",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%202%3A%20Visualization%20Design/Choice%20of%20Axis/Truncated%20Axis/003687_dac4ad31846ff11a_truncated%20axis.png",
+        "question": "What is the number of mathematics olympiad prize winners in 2015 as a proportion of 2016?",
+        "choices": [
+            "Around 25%",
+            "Around 33%",
+            "Aroud 66%",
+            "Around 75%"
+        ],
+        "best_answer": "Around 66%",
+        "chart_type": "bar",
+        "misleading_answer": "Around 25%",
+        "misleader": "Truncated axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/001091_fa39876a38955866_truncated axis.png",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%202%3A%20Visualization%20Design/Choice%20of%20Axis/Truncated%20Axis/001091_fa39876a38955866_truncated%20axis.png",
+        "question": "What is the percentage of Republicans agreeing with court as a proportion of Democrats?",
+        "choices": [
+            "Around 33%",
+            "Around 55%",
+            "Aroud 65%",
+            "Around 85%"
+        ],
+        "best_answer": "Around 85%",
+        "chart_type": "bar",
+        "misleading_answer": "Around 33%",
+        "misleader": "Truncated axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/001265_e986b438c678c36b_truncated axis.png",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%202%3A%20Visualization%20Design/Choice%20of%20Axis/Truncated%20Axis/001265_e986b438c678c36b_truncated%20axis.png",
+        "question": "Which statement is correct about the Yula high school graduation rate between 1991 and 1992?",
+        "choices": [
+            "Tripled",
+            "More than tripled",
+            "Less than tripled"
+        ],
+        "best_answer": "Less than tripled",
+        "chart_type": "bar",
+        "misleading_answer": "Tripled",
+        "misleader": "Truncated axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/004639_8e1d3c98b1669b66_misrepresentation-misleading claim.png",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%203%3A%20Plotting/Inconsistency/Misrepresentation/004639_8e1d3c98b1669b66_misrepresentation-misleading%20claim.png",
+        "question": "True or False: with the support of the Green and Labour voters, the Lib Dem would have a strictly higher percentage of votes than the Tories.",
+        "choices": [
+            "True",
+            "False",
+            "Cannot be inferred / Inadequate information"
+        ],
+        "best_answer": "False",
+        "chart_type": "bar",
+        "misleading_answer": "True",
+        "misleader": "Misrepresentation",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/004665_a6ced931c63d4662_misrepresentation.jpg",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%203%3A%20Plotting/Inconsistency/Misrepresentation/004665_a6ced931c63d4662_misrepresentation.jpg",
+        "question": "What is GBR's gold medal count as a proportion of the gold medal count of URS?",
+        "choices": [
+            "Around 45%",
+            "Around 55%",
+            "Around 65%",
+            "Around 75%"
+        ],
+        "best_answer": "Around 55%",
+        "chart_type": "bar",
+        "misleading_answer": [
+            "Around 65%",
+            "Around 75%"
+        ],
+        "misleader": "Misrepresentation",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/000509_b4691e38439c939f_misrepresentation-misleading title.jpg",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%203%3A%20Plotting/Inconsistency/Misrepresentation/000509_b4691e38439c939f_misrepresentation-misleading%20title.webp",
+        "question": "True or False: Brand A is the best seller, with a higher market share than all other brands.",
+        "choices": [
+            "True",
+            "False",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "False",
+        "chart_type": "pie",
+        "misleading_answer": "True",
+        "misleader": "Misleading annotations",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/004735_faa5853885a5667a_inappropriate axis range.png",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%202%3A%20Visualization%20Design/Choice%20of%20Axis/Inappropriate%20Axis%20Range/004735_faa5853885a5667a_inappropriate%20axis%20range.png",
+        "question": "What is the trend in the average global temperature per year from 1900 to 2000?",
+        "choices": [
+            "Generally constant",
+            "Generally increasing",
+            "Generally decreasing",
+            "Cannot be inferred / Inadequate information"
+        ],
+        "best_answer": "Generally increasing",
+        "chart_type": "line",
+        "misleading_answer": "Generally constant",
+        "misleader": "Inappropriate axis range",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/004790_81f07e747ea17e01_inappropriate axis range.jpg",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%202%3A%20Visualization%20Design/Choice%20of%20Axis/Inappropriate%20Axis%20Range/004790_81f07e747ea17e01_inappropriate%20axis%20range.jpg",
+        "question": "What is the trend in the annual number of mass shootings in America from 1880 to 2015?",
+        "choices": [
+            "Generally constant",
+            "Cannot be inferred / Inadequate information",
+            "Generally increasing",
+            "Generally decreasing"
+        ],
+        "best_answer": [
+            "Cannot be inferred / Inadequate information",
+            "Generally increasing"
+        ],
+        "chart_type": "line",
+        "misleading_answer": "Generally constant",
+        "misleader": "Inappropriate axis range",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/005000_f335be4a69213278_selective data.png",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%201%3A%20Input/Garbage-In/Selective%20Data/005000_f335be4a69213278_selective%20data.png",
+        "question": "What is the trend in the Artic sea ice extent between 1960 and 2000?",
+        "choices": [
+            "Cannot be inferred / Inadequate information",
+            "Decreasing",
+            "Increasing",
+            "Constant"
+        ],
+        "best_answer": "Cannot be inferred / Inadequate information",
+        "chart_type": "line",
+        "misleading_answer": "Decreasing",
+        "misleader": "Cherry picking",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/005086_bdb0c607333cc0fc_inappropriate item order.jpg",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%201%3A%20Input/Lie%20with%20Stats/Inappropriate%20Item%20Order/005086_bdb0c607333cc0fc_inappropriate%20item%20order.jpg",
+        "question": "Which statement is correct?",
+        "choices": [
+            "31% of the respondents think that Netanyahu is very corrupt or somewhat corrupt",
+            "39% of the respondents think that Netanyahu is very corrupt or somewhat corrupt",
+            "48% of the respondents think that Netanyahu is very corrupt or somewhat corrupt",
+            "50% of the respondents think that Netanyahu is very corrupt or somewhat corrupt"
+        ],
+        "best_answer": "48% of the respondents think that Netanyahu is very corrupt or somewhat corrupt",
+        "chart_type": "pie",
+        "misleading_answer": [
+            "31% of the respondents think that Netanyahu is very corrupt or somewhat corrupt",
+            "39% of the respondents think that Netanyahu is very corrupt or somewhat corrupt"
+        ],
+        "misleader": "Inappropriate item order",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/005260_ca843534b471ce7b_truncated axis.jpg",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%202%3A%20Visualization%20Design/Choice%20of%20Axis/Truncated%20Axis/005260_ca843534b471ce7b_truncated%20axis.jpg",
+        "question": "What is the access to drinking water in Wilowtown as a percentage of Silva town?",
+        "choices": [
+            "Around 25%",
+            "Around 50%",
+            "Around 75%",
+            "Around 95%"
+        ],
+        "best_answer": "Around 95%",
+        "chart_type": "bar",
+        "misleading_answer": "Around 25%",
+        "misleader": "Truncated axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/005753_f838bfc82332792c_inverted axis.jpg",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%202%3A%20Visualization%20Design/Choice%20of%20Axis/Truncated%20Axis/005260_ca843534b471ce7b_truncated%20axis.jpg",
+        "question": "True or False: the percentage of population with access to safe drinking water has been decreasing over the years.",
+        "choices": [
+            "True",
+            "False",
+            "Cannot be inferred / Inadequate information"
+        ],
+        "best_answer": "False",
+        "chart_type": "line",
+        "misleading_answer": "True",
+        "misleader": "Inverted axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/006055_a02cf57979a5a568_inconsistent tick intervals.jpg",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%203%3A%20Plotting/Inconsistency/Inconsistent%20Tick%20Intervals/006055_a02cf57979a5a568_inconsistent%20tick%20intervals.jpg",
+        "question": "True or False: the voter turnout in Virginia decreased more between 2010 and 2011 than between 2012 and 2013.",
+        "choices": [
+            "True",
+            "False",
+            "Cannot be inferred / Inadequate information"
+        ],
+        "best_answer": "False",
+        "chart_type": "line",
+        "misleading_answer": "True",
+        "misleader": "Inconsistent tick intervals",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/006244_c0f13f86d97b260c_inconsistent binning size.png",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%203%3A%20Plotting/Inconsistency/Inconsistent%20Binning%20Size/006244_c0f13f86d97b260c_inconsistent%20binning%20size.png",
+        "question": "True or False: the average annual economic growth was lower between 1950 and 1955 than between 2010 and 2015.",
+        "choices": [
+            "True",
+            "False",
+            "Cannot be inferred / Inadequate information"
+        ],
+        "best_answer": "Cannot be inferred / Inadequate information",
+        "chart_type": "bar",
+        "misleading_answer": "False",
+        "misleader": "Inappropriate aggregation",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/004462_e1693ac4cd1d12de_dual axis.png",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%202%3A%20Visualization%20Design/Choice%20of%20Axis/Dual%20Axis/004462_e1693ac4cd1d12de_dual%20axis.gif",
+        "question": "Is Craig's revenue lower than the Newspaper Ad sales in 2009?",
+        "choices":[
+            "Yes",
+            "No",
+            "Cannot be inferred / Inadequate information"
+        ],
+        "best_answer": "Yes",
+        "chart_type": "line",
+        "misleading_answer": "No",
+        "misleader": "Dual axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/001916_da1dad64b04bc599_dual axis.jpg",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%202%3A%20Visualization%20Design/Choice%20of%20Axis/Dual%20Axis/001916_da1dad64b04bc599_dual%20axis.jpg",
+        "question": "Is the heart disease mortality rate for white woman ages 50-54 higher than the one for black woman ages 50-54 in 2015?",
+        "choices":[
+            "Yes",
+            "No",
+            "Cannot be inferred / Inadequate information"
+        ],
+        "best_answer": "No",
+        "chart_type": "line",
+        "misleading_answer": "Yes",
+        "misleader": "Dual axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/001716_ba386f2e68439a9c_dual axis.png",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%202%3A%20Visualization%20Design/Choice%20of%20Axis/Dual%20Axis/001716_ba386f2e68439a9c_dual%20axis.png",
+        "question": "Were there more abortions than cancer screenings in 2011?",
+        "choices":[
+            "Yes",
+            "No",
+            "Cannot be inferred / Inadequate information"
+        ],
+        "best_answer": "No",
+        "chart_type": "line",
+        "misleading_answer": "Yes",
+        "misleader": "Dual axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "real_world_images/000789_ae68c31fb0e7cc60_dual axis.jpg",
+        "image_url": "https://github.com/leoyuholo/bad-vis-browser/blob/master/gallery/Stage%202%3A%20Visualization%20Design/Choice%20of%20Axis/Dual%20Axis/000789_ae68c31fb0e7cc60_dual%20axis.jpg",
+        "question": "What is approximately the difference in percentage points between Jon and Adam on the Test 1?",
+        "choices":[
+            "0.5",
+            "5",
+            "10",
+            "15"
+        ],
+        "best_answer": "15",
+        "chart_type": "line",
+        "misleading_answer": [
+            "0.5",
+            "5"
+        ],
+        "misleader": "Dual axis",
+        "answer_type": "multiple choice"
+    }
+]

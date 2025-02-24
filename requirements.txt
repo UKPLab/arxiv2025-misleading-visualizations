@@ -1,0 +1,14 @@
+accelerate
+bitsandbytes
+einops
+flash_attn==2.5.8
+openai
+pandas
+Pillow
+scikit-learn
+statsmodels
+timm
+torch
+torchvision
+tqdm
+transformers

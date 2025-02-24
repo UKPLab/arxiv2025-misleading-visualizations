@@ -1,0 +1,54 @@
+﻿id,vis,task,subtask,difficulty,discrimination
+1,line chart,retrieve value,,easy,low
+2,line chart,find extremum,,easy,low
+3,line chart,determine range,,moderate,high
+4,line chart,find correlations/trends,,easy,low
+5,line chart,make comparisons,,moderate,high
+6,bar chart,retrieve value,,easy,medium
+7,bar chart,find extremum,,easy,low
+8,bar chart,determine range,,moderate,high
+9,bar chart,make comparisons,,hard,medium
+10,stacked bar chart,retrieve value,absolute value,hard,high
+11,stacked bar chart,retrieve value,relative value,hard,high
+12,stacked bar chart,find extremum,,moderate,high
+14,stacked bar chart,make comparisons,absolute value,moderate,high
+15,stacked bar chart,make comparisons,relative value,hard,high
+16,100% stacked bar chart,retrieve value,relative value,hard,high
+17,100% stacked bar chart,find extremum,relative value,easy,medium
+18,100% stacked bar chart,make comparisons,relative value,moderate,high
+19,pie chart,retrieve value,relative value,moderate,high
+20,pie chart,find extremum,relative value,easy,low
+21,pie chart,make comparisons,relative value,easy,low
+22,histogram,retrieve value,derived value,moderate,medium
+23,histogram,find extremum,derived value,easy,low
+25,histogram,make comparisons,derived value,easy,medium
+27,scatterplot,retrieve value,,moderate,medium
+28,scatterplot,find extremum,,moderate,high
+29,scatterplot,determine range,,moderate,high
+31,scatterplot,find anomalies,,hard,medium
+32,scatterplot,find clusters,,easy,medium
+33,scatterplot,find correlations/trends,,moderate,high
+34,scatterplot,make comparisons,,moderate,medium
+35,area chart,retrieve value,,moderate,high
+36,area chart,find extremum,,hard,high
+37,area chart,determine range,,hard,high
+38,area chart,find correlations/trends,,easy,medium
+40,stacked area chart,retrieve value,absolute value,hard,medium
+41,stacked area chart,retrieve value,relative value,hard,medium
+42,stacked area chart,find extremum,,easy,low
+44,stacked area chart,find correlations/trends,,easy,low
+45,stacked area chart,make comparisons,absolute value,hard,medium
+46,stacked area chart,make comparisons,relative value,hard,medium
+47,bubble chart,retrieve value,,hard,high
+48,bubble chart,find extremum,,moderate,high
+49,bubble chart,determine range,,hard,high
+51,bubble chart,find anomalies,,moderate,high
+52,bubble chart,find clusters,,moderate,high
+53,bubble chart,find correlations/trends,,hard,low
+54,bubble chart,make comparisons,,moderate,high
+55,choropleth map,retrieve value,approximate value,hard,low
+56,choropleth map,find extremum,approximate value,easy,low
+57,choropleth map,make comparisons,approximate value,easy,medium
+59,treemap,find extremum,relative value,moderate,high
+60,treemap,make comparisons,relative value,hard,high
+61,treemap,identify hierarchical structure,,easy,medium

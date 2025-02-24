@@ -1,0 +1,890 @@
+[
+    {
+        "image_path": "calvi_examples/1.png",
+        "question": "True or False: GDP per capita for country Z grew faster from 2000 to 2003 than from 2005 to 2008.",
+        "choices": [
+            "True",
+            "False",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "True",
+        "chart_type": "line",
+        "misleading_answer": "False",
+        "misleader": "Inconsistent tick intervals",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/2.png",
+        "question": "What is the trend of the total number of apples harvested in far X from Jan 11 to Jan 14?",
+        "choices": [
+            "Decreasing then increasing",
+            "Increasing then decreasing",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "Decreasing then increasing",
+        "chart_type": "line",
+        "misleading_answer": "Increasing then decreasing",
+        "misleader": "Inverted axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/3.png",
+        "question": "What is the price of water bottle from store A as a proprotion of that from store B?",
+        "choices": [
+            "17%",
+            "25%",
+            "50%",
+            "90%"
+        ],
+        "best_answer": "90%",
+        "chart_type": "bar",
+        "misleading_answer": "17%",
+        "misleader": "Truncated axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/4.png",
+        "question": "Assuming today is May 10 and given the chart below, which statement about rainfall (mm) is true for the past 14 days?",
+        "choices": [
+            "The amount of rainfall peaked at the end of the past 14 days",
+            "There was more rainfall at the beginning than at the end of the past 14 days",
+            "None of the days had lower than 40mm of rainfall",
+            "The amount of rainfall peaked at the beginning of the past 14 days"
+        ],
+        "best_answer": "There was more rainfall at the beginning than at the end of the past 14 days",
+        "chart_type": "bar",
+        "misleading_answer": "The amount of rainfall peaked at the end of the past 14 days",
+        "misleader": "Inappropriate item order",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/5.png",
+        "question": "Which region had the highest number of confirmed cases per 1000 people?",
+        "choices": [
+            "A",
+            "B",
+            "C",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "Cannot be inferred/Inadequate information",
+        "chart_type": "map",
+        "misleading_answer": "B",
+        "misleader": "Missing normalization",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/6.png",
+        "question": "Do U.S. states have a more similar number of sunny days in the summer or in the winter?",
+        "choices": [
+            "Summer",
+            "Winter",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "Cannot be inferred/Inadequate information",
+        "chart_type": "map",
+        "misleading_answer": "Summer",
+        "misleader": "Inappropriate axis range",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/7.png",
+        "question": "Do U.S. states have a more similar number of windy days in the summer or in the winter?",
+        "choices": [
+            "Summer",
+            "Winter",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "Cannot be inferred/Inadequate information",
+        "chart_type": "map",
+        "misleading_answer": "Winter",
+        "misleader": "Inappropriate axis range",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/8.png",
+        "question": "What is the number of concert tickets sold on Aug 10 as a proportion of that on Aug 11?",
+        "choices": [
+            "20%",
+            "40%",
+            "60%",
+            "80%"
+        ],
+        "best_answer": "80%",
+        "chart_type": "bar",
+        "misleading_answer": "60%",
+        "misleader": "Truncated axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/9.png",
+        "question": "On May 06 in city Z, what is the number of visitors at train station B as a proportion of that at train station C?",
+        "choices": [
+            "25%",
+            "33%",
+            "75%",
+            "100%"
+        ],
+        "best_answer": "33%",
+        "chart_type": "stacked bar",
+        "misleading_answer": "100%",
+        "misleader": "Truncated axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/10.png",
+        "question": "What is the trend of the percentage of bacteria Z from 1970 to 2020?",
+        "choices": [
+            "Generally increasing",
+            "Generally decreasing",
+            "Generally constant",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": [
+            "Generally increasing",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "chart_type": "line",
+        "misleading_answer": "Generally constant",
+        "misleader": "Inappropriate axis range",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/11.png",
+        "question": "Approximately, what is the total number of visitors at Amusement Park B as a proportion of that at Amusement Park C from May to December?",
+        "choices": [
+            "33%",
+            "67%",
+            "100%",
+            "200%"
+        ],
+        "best_answer": "33%",
+        "chart_type": "stacked area",
+        "misleading_answer": "200%",
+        "misleader": "Truncated axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/12.png",
+        "question": "Approximately, what is brand C's total sales as a proportion of brand B's total sales from Jan 01 to Mar 15?",
+        "choices": [
+            "20%",
+            "50%",
+            "60%",
+            "90%"
+        ],
+        "best_answer": "60%",
+        "chart_type": "stacked area",
+        "misleading_answer": "20%",
+        "misleader": "Truncated axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/13.png",
+        "question": "True or False: Predatory species Z is more prevalent in NC than in AZ.",
+        "choices": [
+            "True",
+            "False",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "False",
+        "chart_type": "map",
+        "misleading_answer": "True",
+        "misleader": "Inverted axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/14.png",
+        "question": "True or False: WY has a higher risk of bacteria Z infection than ND.",
+        "choices": [
+            "True",
+            "False",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "True",
+        "chart_type": "map",
+        "misleading_answer": "False",
+        "misleader": "Inverted axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/15.png",
+        "question": "True or False: The annual number of trees planted in town Z has been increasing from 1960 to 1980.",
+        "choices": [
+            "True",
+            "False",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "False",
+        "chart_type": "bar",
+        "misleading_answer": "True",
+        "misleader": "Inverted axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/16.png",
+        "question": "What is the trend of the number of bookstores in city Z from 2000 to 2020?",
+        "choices": [
+            "Increasing",
+            "Decreasing",
+            "Constant"
+        ],
+        "best_answer": "Increasing",
+        "chart_type": "bar",
+        "misleading_answer": "Decreasing",
+        "misleader": "Inverted axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/17.png",
+        "question": "Which of the following is true about the annual number of new movies released in city X?",
+        "choices": [
+            "There were more new movies released in 1992 than in 1994.",
+            "2000 had the most number of new movies released.",
+            "There were more new movies released in 1996 than in 1995.",
+            "None of the above"
+        ],
+        "best_answer": "There were more new movies released in 1992 than in 1994.",
+        "chart_type": "line",
+        "misleading_answer": "2000 had the most number of new movies released.",
+        "misleader": "Inverted axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/18.png",
+        "question": "What is the trend of the total sales for item X from Apr to Jul?",
+        "choices": [
+            "Decreasing then increasing",
+            "Increasing then decreasing",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "Increasing then decreasing",
+        "chart_type": "line",
+        "misleading_answer": "Decreasing then increasing",
+        "misleader": "Inverted axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/19.png",
+        "question": "What is the trend of the growth for plant species P as the number of hours of sunlight exposure per mont increases?",
+        "choices": [
+            "Generally increases",
+            "Generally decreases",
+            "Generally constant",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "Generally decreases",
+        "chart_type": "scatterplot",
+        "misleading_answer": "Generally increases",
+        "misleader": "Inverted axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/20.png",
+        "question": "Which of the following is true about company Z?",
+        "choices": [
+            "More employees have vacation days at D than those at A.",
+            "More employees have a satisfaction rating at B than those who have a rating at C.",
+            "Employee satisfaction rating decreases as the annual number of vacation days increases.",
+            "None of the above"
+        ],
+        "best_answer": "More employees have vacation days at D than those at A.",
+        "chart_type": "scatterplot",
+        "misleading_answer": "More employees have a satisfaction rating at B than those who have a rating at C.",
+        "misleader": "Inverted axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/21.png",
+        "question": "What is the trend of the survival rate as weight increases for species Z?",
+        "choices": [
+            "Generally increases",
+            "Generally decreases",
+            "Generally constant",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "Generally increases",
+        "chart_type": "scatterplot",
+        "misleading_answer": "Generally decreases",
+        "misleader": "Inverted axis",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/22.png",
+        "question": "Which of the following is true about the prevalence of the plant species Y?",
+        "choices": [
+            "It is more prevalent in region D than in E",
+            "It is less prevalent in region B than in C",
+            "It is more prevalent in Region C than in A",
+            "It is less prevalent in region C than in D"
+        ],
+        "best_answer": "It is less prevalent in region C than in D",
+        "chart_type": "map",
+        "misleading_answer": "It is more prevalent in Region C than in A",
+        "misleader": "Inappropriate item order",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/23.png",
+        "question": "True or False: The number of visitors at airport X is decreasing from 2000 to 2005.",
+        "choices": [
+            "True",
+            "False",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "False",
+        "chart_type": "line",
+        "misleading_answer": "True",
+        "misleader": "Inappropriate item order",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/24.png",
+        "question": "Is the total number of shirts sold by company Z in the first half of 2021 higher than that in the second half?",
+        "choices": [
+            "Yes",
+            "No",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "No",
+        "chart_type": "area",
+        "misleading_answer": "Yes",
+        "misleader": "Inappropriate item order",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/25.png",
+        "question": "Which of the following is true about the three bands of shampoo in city Y from 2001 to 2005?",
+        "choices": [
+            "The market share of brand C is on an increasing trend from 2001 to 2005.",
+            "The market share of brand C is higher in 2011 than in 2002.",
+            "Brand B had the largest market share in 2001 compared to its market share in the other years.",
+            "none of the above"
+        ],
+        "best_answer": "The market share of brand C is higher in 2011 than in 2002",
+        "chart_type": "stacked bar",
+        "misleading_answer": [
+            "The market share of brand C is on an increasing trend from 2001 to 2005.",
+            "Brand B had the largest market share in 2001 compared to its market share in the other years."
+        ],
+        "misleader": "Inappropriate item order",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/26.png",
+        "question": "Approximately, what is the number of votes for candidate A as a proportion of those for candidate B?",
+        "choices": [
+            "50%",
+            "60%",
+            "70%",
+            "80%"
+        ],
+        "best_answer": "80%",
+        "chart_type": "bar",
+        "misleading_answer": "50%",
+        "misleader": "Inconsistent tick intervals",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/27.png",
+        "question": "Does cell phone brand A have more than half of the total market share?",
+        "choices": [
+            "Yes",
+            "No",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "Cannot be inferred/Inadequate information",
+        "chart_type": "pie",
+        "misleading_answer": [
+            "Yes",
+            "No"
+        ],
+        "misleader": "Inappropriate use of pie chart",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/28.png",
+        "question": "Are there more households with exactly 1 car than households with exactly 2 cars?",
+        "choices": [
+            "Yes",
+            "No",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "Cannot be inferred/Inadequate information",
+        "chart_type": "pie",
+        "misleading_answer": [
+            "Yes",
+            "No"
+        ],
+        "misleader": "Misrepresentation",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/29.png",
+        "question": "Was the average amount of precipitation over 15 years in region D higher than that in region C?",
+        "choices": [
+            "Yes",
+            "No",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "Cannot be inferred/Inadequate information",
+        "chart_type": "map",
+        "misleading_answer": "Yes",
+        "misleader": "Missing data",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/30.png",
+        "question": "Company A sells a board game. Assuming today is Jun 01, 2022, which of the following statements is true?",
+        "choices": [
+            "2004 has more copies sold than 2003",
+            "Copies sold per year fell sharply in 2022",
+            "Copies sold per year has been strictly increasing since 2003",
+            "None of the above"
+        ],
+        "best_answer": "None of the above",
+        "chart_type": "line",
+        "misleading_answer": "Copies sold per year fell sharply in 2022",
+        "misleader": "Inappropriate aggregation",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/31.png",
+        "question": "Assuming today is Feb 20, 2022, which of the following is true about the vegetables planted by the three farms?",
+        "choices": [
+            "All three farms planted more vegetables in 2022 than they did in the previous years.",
+            "All three farms planted fewer vegetables in 2022 than they did in the previous years.",
+            "All three farms planted about the same amount of vegetables in 2022 as they did in the previous years.",
+            "None of the above."
+        ],
+        "best_answer": "None of the above.",
+        "chart_type": "stacked bar",
+        "misleading_answer": "All three farms planted fewer vegetables in 2022 than they did in the previous years.",
+        "misleader": "Inappropriate aggregation",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/32.png",
+        "question": "Assuming today is Apr 10, 2022, did the total number of cars parked in the three parking lots fall sharply in 2022?",
+        "choices": [
+            "Yes",
+            "No",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "Cannot be inferred/Inadequate information",
+        "chart_type": "stacked bar",
+        "misleading_answer": "Yes",
+        "misleader": "Inappropriate aggregation",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/33.png",
+        "question": "Assuming today is May 01, 2022, which of the following statements is true?",
+        "choices": [
+            "Company Z had more new employees in 2018 than in 2020",
+            "The number of new employees per year fell sharply in 2022",
+            "The total number of employees in company Z decreased in 2022",
+            "None of the above"
+        ],
+        "best_answer": "None of the above",
+        "chart_type": "area",
+        "misleading_answer": "The number of new employees per year fell sharply in 2022",
+        "misleader": "Inappropriate aggregation",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/34.png",
+        "question": "True or False: Within each town, is there a negative releationship between average daily working hours and happiness score?",
+        "choices": [
+            "True",
+            "False",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "False",
+        "chart_type": "scatterplot",
+        "misleading_answer": "True",
+        "misleader": "Inappropriate aggregation",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/35.png",
+        "question": "Within each city, is there a positive relationship between salary and average daily working hours?",
+        "choices": [
+            "Yes",
+            "No",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "Cannot be inferred/Inadequate information",
+        "chart_type": "scatterplot",
+        "misleading_answer": "Yes",
+        "misleader": "Inappropriate aggregation",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/36.png",
+        "question": "Does any members of species C weight more than 5lbs?",
+        "choices": [
+            "Yes",
+            "No",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "Cannot be inferred/Inadequate information",
+        "chart_type": "scatterplot",
+        "misleading_answer": "No",
+        "misleader": "Overplotting",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/37.png",
+        "question": "What is the trend of sales in gift shop A from jan to Dec?",
+        "choices": [
+            "Generally increasing",
+            "Generally decreasing",
+            "Generally constant",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "Cannot be inferred/Inadequate information",
+        "chart_type": "line",
+        "misleading_answer": "Generally increasing",
+        "misleader": "Cherry picking",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/38.png",
+        "question": "What is the trend of the average price of books from 1960 to 2020 in city Z?",
+        "choices": [
+            "Generally increasing",
+            "Generally decreasing",
+            "Generally constant",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "Cannot be inferred/Inadequate information",
+        "chart_type": "line",
+        "misleading_answer": "Generally constant",
+        "misleader": "Cherry picking",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/39.png",
+        "question": "Assuming today is May 01, and half of the votes from each state for a favorite ice cream brand have been counted. The color of each state corresponds to the brand that has received the most votes in that state so far. The brand with the most number of colored states will be the most popular brand, and the results will be finalized on May 15. Which of the following is True?",
+        "choices": [
+            "A will be the most popular brand of ice cream",
+            "B will be the most popular brand of ice cream",
+            "C will be the most popular brand of ice cream",
+            "Too early to say]"
+        ],
+        "best_answer": "Too early to say",
+        "chart_type": "map",
+        "misleading_answer": "A will be the most popular brand of ice cream",
+        "misleader": "Concealed uncertainty",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/40.png",
+        "question": "True or False: If the temperature gets higher than 100F, then the bottles of water sold must be greater than 750.",
+        "choices": [
+            "True",
+            "False",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "False",
+        "chart_type": "scatterplot",
+        "misleading_answer": "True",
+        "misleader": "Concealed uncertainty",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/41.png",
+        "question": "True or False: More than half of the people in county Z prefer reading at night.",
+        "choices": [
+            "True",
+            "False",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "False",
+        "chart_type": "pie",
+        "misleading_answer": "True",
+        "misleader": "Misleading annotations",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/42.png",
+        "question": "The residents of town Y are voting on a favorite hiking trail, and half of the votes have been counted. The poll closes on Sep 01, 2022. Which of the following is True?",
+        "choices": [
+            "Hiking trail A will be voted as the favorite trail",
+            "Hiking trail B will be voted as the favorite trail",
+            "Hiking trail C will be voted as the favorite trail",
+            "Too early to say"
+        ],
+        "best_answer": "Too early to say",
+        "chart_type": "bar",
+        "misleading_answer": "Hiking trail A will be voted as the favorite trail",
+        "misleader": "Concealed uncertainty",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/43.png",
+        "question": "In town X, what is the approximate average number of customers at mall A from Jan to Mar?",
+        "choices": [
+            "200",
+            "300",
+            "400",
+            "500"
+        ],
+        "best_answer": "400",
+        "chart_type": "bar",
+        "misleading_answer": "300",
+        "misleader": "Misleading annotations",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/44.png",
+        "question": "In city Z, what is the approximate average number of new buildings built from 1950 to 1952?",
+        "choices": [
+            "20",
+            "30",
+            "40",
+            "50"
+        ],
+        "best_answer": "40",
+        "chart_type": "scatterplot",
+        "misleading_answer": "30",
+        "misleader": "Misleading annotations",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/45.png",
+        "question": "True or False: Monthly sales for store B is increasing from Jan to Dec.",
+        "choices": [
+            "True",
+            "False",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "False",
+        "chart_type": "line",
+        "misleading_answer": "True",
+        "misleader": "Misleading annotations",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/46.png",
+        "question": "What is the number of visitors at theater A as a proportion of that at theater B in 2001?",
+        "choices": [
+            "40%",
+            "50%",
+            "60%",
+            "70%"
+        ],
+        "best_answer": "50%",
+        "chart_type": "bar",
+        "misleading_answer": "N/A",
+        "misleader": "N/A",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/47.png",
+        "question": "Which statement about the daily number of traffic accidents from Jan 01 to Jan 15 in state Z is true?",
+        "choices": [
+            "It was higher on Jan 08 than Jan 07",
+            "It increased from Jan 11 to Jan 15",
+            "All of the days had more than 25 accidents",
+            "It decreased from Jan 03 to Jan 07"
+        ],
+        "best_answer": " It increased from Jan 11 to Jan 15",
+        "chart_type": "bar",
+        "misleading_answer": "N/A",
+        "misleader": "N/A",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/48.png",
+        "question": "Which of the following statements is true about the customers at the three bike shops in city Z?",
+        "choices": [
+            "On Jul 02 shop B had more customers than A and C combined",
+            "The number of customers at shop C decreased from Jul 01 to Jul 03",
+            "The number of customers at shop A increased from Jul 01 to Jul 03",
+            "None of the above"
+        ],
+        "best_answer": "On Jul 02 shop B had more customers than A and C combined",
+        "chart_type": "stacked bar",
+        "misleading_answer": "N/A",
+        "misleader": "N/A",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/49.png",
+        "question": "Which of the following is true about the advertising expense breakdown of company Z in countries A, B, and C?",
+        "choices": [
+            "Advertising expense for TV & Radio was higher than that from social media in country A",
+            "In country C company Z had less advertising expense for direct mail that the other two methods",
+            "Company Z had the highest total advertising expense in country B",
+            "None of the above"
+        ],
+        "best_answer": "In country C company Z had less advertising expense for direct mail that the other two methods",
+        "chart_type": "stacked bar",
+        "misleading_answer": "N/A",
+        "misleader": "N/A",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/50.png",
+        "question": "Which of the following is true about the four brands of perfume in city Z?",
+        "choices": [
+            "The market share of brand D is on an increasing trend from 2011 to 2015",
+            "The market share of brand A is higher in 2011 than in 2012",
+            "In 2013 brand B had the largest market share among all four brands",
+            "None of the above"
+        ],
+        "best_answer": "In 2013 brand B had the largest market share among all four brands",
+        "chart_type": "stacked bar",
+        "misleading_answer": "N/A",
+        "misleader": "N/A",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/51.png",
+        "question": "Which of the following about the monthly number of new clients is true?",
+        "choices": [
+            "It decreased from Mar to Jun for Company A",
+            "It is higher in Feb for company B than company A",
+            "It increased from Sep to Dec for Company B",
+            "None of the above"
+        ],
+        "best_answer": "It increased from Sep to Dec for Company B",
+        "chart_type": "line",
+        "misleading_answer": "N/A",
+        "misleader": "N/A",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/52.png",
+        "question": "What is the trend of the monthly number of new restaurants opening in county Y in 2000?",
+        "choices": [
+            "Increasing then decreasing",
+            "Decreasing then increasing",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "Increasing then decreasing",
+        "chart_type": "line",
+        "misleading_answer": "N/A",
+        "misleader": "N/A",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/53.png",
+        "question": "is the total number of beers consumed by person Z in the first half of 2005 higher than that in the second half?",
+        "choices": [
+            "Yes",
+            "No",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "Yes",
+        "chart_type": "area",
+        "misleading_answer": "N/A",
+        "misleader": "N/A",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/54.png",
+        "question": "Approximately, what is store C's total sales as a proportion of store B's total sales in 1995?",
+        "choices": [
+            "40%",
+            "60%",
+            "80%",
+            "100%"
+        ],
+        "best_answer": "100%",
+        "chart_type": "stacked area",
+        "misleading_answer": "N/A",
+        "misleader": "N/A",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/55.png",
+        "question": "is there a positive relationship between SAT score and annual family income for students in city Z?",
+        "choices": [
+            "Yes",
+            "No",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "Yes",
+        "chart_type": "scatterplot",
+        "misleading_answer": "N/A",
+        "misleader": "N/A",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/56.png",
+        "question": "Which of the following is true about the residents in towns X and Y?",
+        "choices": [
+            "There is a negative relationship between sleep quality score and average weekly hours spent outdoors for town X",
+            "There is a positive relationship between sleep quality score and average weekly hours spent outdoors for town Y",
+            "Most residents in town X spend more than 6 hours outdoors every week",
+            "None of the above"
+        ],
+        "best_answer": "There is a positive relationship between sleep quality score and average weekly hours spent outdoors for town Y",
+        "chart_type": "scatterplot",
+        "misleading_answer": "N/A",
+        "misleader": "N/A",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/57.png",
+        "question": "Which of the following is true about the market share of grocery stores in town Z?",
+        "choices": [
+            "Store A has less than half of the total market share",
+            "Store C has a higher market share than store B",
+            "Store B has the second highest market share",
+            "None of the above"
+        ],
+        "best_answer": "Store B has the second highest market share",
+        "chart_type": "pie",
+        "misleading_answer": "N/A",
+        "misleader": "N/A",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/58.png",
+        "question": "Which of the following is true about the education level of residents in city Z?",
+        "choices": [
+            "More than 60% of residents have a Bachelor's degree or above",
+            "The majority of residents have a graduate degree",
+            "There are fewer residents whose education level is Associate degree than those with a high school degree",
+            "None of the above"
+        ],
+        "best_answer": "More than 60% of residents have a Bachelor's degree or above",
+        "chart_type": "pie",
+        "misleading_answer": "N/A",
+        "misleader": "N/A",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/59.png",
+        "question": "Which of the following states has the highest number of Lego owners?",
+        "choices": [
+            "AZ",
+            "NV",
+            "TN",
+            "Cannot be inferred/Inadequate information"
+        ],
+        "best_answer": "AZ",
+        "chart_type": "map",
+        "misleading_answer": "N/A",
+        "misleader": "N/A",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_path": "calvi_examples/60.png",
+        "question": "Which of the following is true about restaurant R?",
+        "choices": [
+            "It is more popular in region E than in D",
+            "It is less popular in region A than in C",
+            "It is more popular in region B than in C",
+            "It is less popular in region C than in D"
+        ],
+        "best_answer": "It is less popular in region A than in C",
+        "chart_type": "map",
+        "misleading_answer": "N/A",
+        "misleader": "N/A",
+        "answer_type": "multiple choice"
+    }
+]
