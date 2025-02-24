@@ -13,7 +13,7 @@ Don't hesitate to send us an e-mail or report an issue, if something is broken (
 
 
 <p align="center">
-  <img width="80%" src="assets/accuracy.png" alt="header" />
+  <img width="65%" src="assets/accuracy.png" alt="header" />
 </p>
 
 ## Abstract 
