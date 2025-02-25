@@ -18,7 +18,7 @@ Don't hesitate to send us an e-mail or report an issue, if something is broken (
 
 ## Abstract 
 
-We assess the vulnerability of multimodal large language models to misleading visualizations - charts that distort the underlying data  using techniques such as truncated or inverted axes, leading readers to draw inaccurate conclusions that may support misinformation or conspiracy theories. Our analysis shows that these distortions severely harm multimodal large language models, reducing their question-answering accuracy by up to 34.8 percentage points compared to non-misleading visualizations and lowering it to the level of the random baseline. To mitigate this vulnerability, we introduce six inference-time methods to improve performance of MLLMs on misleading visualizations while preserving their accuracy on non-misleading ones. The most effective approach involves (1) extracting the underlying data table and (2) using a text-only large language model to answer questions based on the table. This method improves performance on misleading visualizations by 15.4 to 19.6 percentage points.
+> We assess the vulnerability of multimodal large language models to misleading visualizations - charts that distort the underlying data  using techniques such as truncated or inverted axes, leading readers to draw inaccurate conclusions that may support misinformation or conspiracy theories. Our analysis shows that these distortions severely harm multimodal large language models, reducing their question-answering accuracy by up to 34.8 percentage points compared to non-misleading visualizations and lowering it to the level of the random baseline. To mitigate this vulnerability, we introduce six inference-time methods to improve performance of MLLMs on misleading visualizations while preserving their accuracy on non-misleading ones. The most effective approach involves (1) extracting the underlying data table and (2) using a text-only large language model to answer questions based on the table. This method improves performance on misleading visualizations by 15.4 to 19.6 percentage points.
 
 ## Environment
 
@@ -54,6 +54,7 @@ $ pip install -r requirements.txt
 
 - VLAT 
   - dataset introduced by Lee et al. (2017) in "VLAT: Development of a Visualization Literacy Assessment Test"
+  - Ready to use
 
 
 The following script will prepare the datasets, including downloading the real-world images.
@@ -67,8 +68,6 @@ $ python src/dataset_preparation.py
 ## Quick start
 
 ### Evaluate a multimodal LLM on one or more dataset
-
-
 
 ```
 $ python src/question_answering.py --datasets calvi-chartom-real_world-vlat --model internvl2.5/8B/
@@ -105,13 +104,13 @@ If you find this work relevant to your research or use this code in your work, p
 ```bibtex 
 @article{tonglet2025misleadingvisualizations,
   title={Protecting multimodal LLMs against misleading visualizations},
-  author={Tonglet, Jonathan and Marie-Francine Moens and Tinne Tuytelaars and Gurevych, Iryna},
+  author={Tonglet, Jonathan and Tinne Tuytelaars and Marie-Francine Moens and Gurevych, Iryna},
   journal={arXiv preprint arXiv:2502.XXXX},
   year={2025}
 }
 ```
 
-Furthermore, if you use the CALVI and/or the real-world dataset, please cite:
+Furthermore, if you use CALVI and/or the real-world dataset, please also cite:
 
 ```bibtex 
 @inproceedings{10.1145/3544548.3581406,
@@ -146,7 +145,7 @@ series = {CHI '23}
 }
 ```
 
-If you use the CHARTOM dataset, please cite:
+If you use CHARTOM, please cite:
 
 ```bibtex 
 @article{bharti2024chartom,
@@ -159,7 +158,7 @@ If you use the CHARTOM dataset, please cite:
 }
 ```
 
-If you use the VLAT dataset, please cite:
+If you use VLAT, please cite:
 
 ```bibtex 
 @article{7539634,
