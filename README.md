@@ -12,13 +12,26 @@ Contact person: [Jonathan Tonglet](mailto:jonathan.tonglet@tu-darmstadt.de)
 Don't hesitate to send us an e-mail or report an issue, if something is broken (and it shouldn't be) or if you have further questions. 
 
 
-<p align="center">
-  <img width="65%" src="assets/accuracy.png" alt="header" />
-</p>
 
 ## Abstract 
 
 > We assess the vulnerability of multimodal large language models to misleading visualizations - charts that distort the underlying data  using techniques such as truncated or inverted axes, leading readers to draw inaccurate conclusions that may support misinformation or conspiracy theories. Our analysis shows that these distortions severely harm multimodal large language models, reducing their question-answering accuracy by up to 34.8 percentage points compared to non-misleading visualizations and lowering it to the level of the random baseline. To mitigate this vulnerability, we introduce six inference-time methods to improve performance of MLLMs on misleading visualizations while preserving their accuracy on non-misleading ones. The most effective approach involves (1) extracting the underlying data table and (2) using a text-only large language model to answer questions based on the table. This method improves performance on misleading visualizations by 15.4 to 19.6 percentage points.
+
+## tl;dr
+
+- Misleading visualizations are charts that distort the underlying data, leading readers to inaccurate interpretations 📊
+  - distortions include truncated and inverted axes, 3D effects, or inconsistent tick intervals
+  - misleading negatively affect the reasoning abilities of human readers. What about MLLMs?
+- MLLMs are vulnerable to misleading visualizations in a QA setting ⚠️
+  - their performance drops to the level of the random baseline 
+  - up to 65.5 percentage points decrease in accuracy compared to ChartQA
+- We propose six inference-time correction methods to improve performance on misleading visualizations 🛠️
+  - the best method is to extract the table using the MLLM, then answer with a LLM using the table only
+  - the second best method is to redraw the visualization based on the table, removing the distortion
+
+<p align="center">
+  <img width="65%" src="assets/accuracy.png" alt="header" />
+</p>
 
 ## Environment
 
@@ -36,7 +49,6 @@ $ pip install -r requirements.txt
   <img width="70%" src="assets/real_world_examples.png" alt="header" />
 </p>
 
-### Prepare the datasets
 
 - CALVI
   - dataset introduced by Get el. (2023) in "CALVI: Critical Thinking Assessment for Literacy in Visualizations".
@@ -67,6 +79,13 @@ $ python src/dataset_preparation.py
 
 ## Quick start
 
+The following code lets you evaluate the performance of MLLMs on misleading and non-misleading visualizations, with or without one of the six correction methods proposed in the paper.
+Some correction methods require intermediate steps like extracting the axes or table, or redrawing the visualization.
+
+<p align="center">
+  <img width="70%" src="assets/correction_methods.png" alt="header" />
+</p>
+
 ### Evaluate a multimodal LLM on one or more dataset
 
 ```
@@ -81,7 +100,7 @@ $ python src/chart2metadata.py --datasets calvi-chartom-real_world-vlat --model 
 ```
 
 
-### Redraw visualization
+### Redraw a visualization based on the extracted table
 
 ```
 $ python src/table2code.py --datasets calvi-chartom-real_world-vlat --model qwen2.5/7B/
