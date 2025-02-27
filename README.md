@@ -19,18 +19,23 @@ Don't hesitate to send us an e-mail or report an issue, if something is broken (
 
 ## tl;dr
 
-- Misleading visualizations are charts that distort the underlying data, leading readers to inaccurate interpretations 📊
-  - distortions include truncated and inverted axes, 3D effects, or inconsistent tick intervals
-  - misleading negatively affect the reasoning abilities of human readers. What about MLLMs?
-- MLLMs are vulnerable to misleading visualizations in a QA setting ⚠️
-  - their performance drops to the level of the random baseline 
-  - up to 65.5 percentage points decrease in accuracy compared to ChartQA
-- We propose six inference-time correction methods to improve performance on misleading visualizations 🛠️
-  - the best method is to extract the table using the MLLM, then answer with a LLM using the table only
-  - the second best method is to redraw the visualization based on the table, removing the distortion
-
+- Misleading visualizations are **charts that distort the underlying data**, leading readers to inaccurate interpretations 📊
+  - Distortions include truncated and inverted axes, 3D effects, or inconsistent tick intervals
+  - Misleading negatively affect the performance of human readers in QA tasks. What about MLLMs?
+- MLLMs **are very vulnerable** to misleading visualizations too ⚠️
+  - their QA performance drops to the level of the random baseline 
+  - up to 65.5 percentage points decrease in accuracy compared to non-misleading visualization datasets like ChartQA
+ 
 <p align="center">
   <img width="65%" src="assets/accuracy.png" alt="header" />
+</p>
+
+- We propose **six inference-time correction methods** to improve performance on misleading visualizations 🛠️
+  - the best method is to extract the table using the MLLM, then answer with a LLM using the table only
+  - this improves performance by up to 19.6 percentage points
+
+<p align="center">
+  <img width="65%" src="assets/correction_method_results.png" alt="header" />
 </p>
 
 ## Environment
