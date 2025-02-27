@@ -97,6 +97,10 @@ Some correction methods require intermediate steps like extracting the axes or t
 $ python src/question_answering.py --datasets calvi-chartom-real_world-vlat --model internvl2.5/8B/
 ```
 
+If you want to use **TinyChart**: you need to copy [this folder](https://github.com/X-PLUG/mPLUG-DocOwl/tree/main/TinyChart/tinychart) and place it in the root folder of this repo
+
+If you want to use **ChartInstruction**: you need to copy [this folder](https://github.com/zengxingchen/ChartQA-MLLM/tree/main/model/llava_hr) and place it in the root folder of this repo
+
 
 ### Generate metadata (table, axis)
 
