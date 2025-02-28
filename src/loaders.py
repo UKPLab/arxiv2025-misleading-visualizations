@@ -101,7 +101,7 @@ def loader_ovis(model_path):
     return model, (text_tokenizer, visual_tokenizer)
 
 
-def loader_llava_chartinstruct(model_path):
+def loader_chartinstruction(model_path):
     from llava_hr.model.builder import load_pretrained_model as load_pretrained_model_llava
     from llava_hr.mm_utils import get_model_name_from_path as get_model_name_llava
     tokenizer, model, image_processor, context_len = load_pretrained_model_llava(
@@ -158,7 +158,7 @@ def load_model(model):
     #large language models
     'qwen2.5/7B/': 'Qwen/Qwen2.5-7B-Instruct',
     #Chart models
-    'llava-chartinstruct/13B/' : 'lewy666/llava-hr-ChartInstruction',
+    'chartinstruction/13B/' : 'lewy666/llava-hr-ChartInstruction',
     'chartgemma/3B/': 'ahmed-masry/chartgemma',
     'tinychart/3B/': 'mplug/tinychart'
         }
@@ -167,7 +167,7 @@ def load_model(model):
                   'llava-v1.6-vicuna': loader_llava, 
                   'ovis1.6': loader_ovis,
                   'qwen2vl':loader_qwen2vl, 'qwen2.5': loader_llm_default,
-                  'llava-chartinstruct': loader_llava_chartinstruct,
+                  'chartinstruction': loader_chartinstruction,
                   'chartgemma': loader_chartgemma,
                   'tinychart': loader_tinychart
                  }
