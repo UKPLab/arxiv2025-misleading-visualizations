@@ -109,7 +109,7 @@ def generate_answer_ovis(image_path, prompt, tokenizer, image_processor, context
         return response
 
 
-def generate_answer_llava_chartinstruct(image_path, prompt, tokenizer, image_processor, context_len, model, max_tokens):
+def generate_answer_chartinstruction(image_path, prompt, tokenizer, image_processor, context_len, model, max_tokens):
     from llava_hr.eval.run_llava import eval_model as eval_llava_chartinstruct
     response = eval_llava_chartinstruct(image_path, prompt, model, tokenizer, image_processor, context_len, conv_mode="llava_v1", temperature=0, max_new_tokens=max_tokens)
     return response
@@ -184,7 +184,7 @@ def generate_answer(image_path, prompt, tokenizer, image_processor, context_len,
                   'qwen2vl': generate_answer_qwen2vl, 
                   'qwen2.5': generate_answer_llm,
                   #chart models
-                  'llava-chartinstruct': generate_answer_llava_chartinstruct,
+                  'chartinstruction': generate_answer_chartinstruction,
                   'chartgemma': generate_answer_chartgemma,
                   'tinychart': generate_answer_tinychart,
                   #Closed-source models
