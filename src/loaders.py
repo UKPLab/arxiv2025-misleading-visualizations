@@ -160,7 +160,7 @@ def load_model(model):
     #Chart models
     'chartinstruction/13B/' : 'lewy666/llava-hr-ChartInstruction',
     'chartgemma/3B/': 'ahmed-masry/chartgemma',
-    'tinychart/3B/': 'mplug/tinychart'
+    'tinychart/3B/': 'mPLUG/TinyChart-3B-768'
         }
     
     loader_map = {'internvl2.5': loader_internvl2,  
