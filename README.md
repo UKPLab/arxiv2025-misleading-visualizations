@@ -56,21 +56,21 @@ $ pip install -r requirements.txt
 
 
 - CALVI
-  - dataset introduced by Get el. (2023) in "CALVI: Critical Thinking Assessment for Literacy in Visualizations".
+  - dataset introduced by Get el. (2023) in "[CALVI: Critical Thinking Assessment for Literacy in Visualizations](https://dl.acm.org/doi/10.1145/3544548.3581406)".
   - Ready to use 
   - License: CC-BY 4.0
 
 - Real-world
-  - dataset introduced in this work, based on visualizations collected by Lo et al. (2022) in "Misinformed by visualization: What do we learn from misinformative visualizations?"
+  - dataset introduced in this work, based on visualizations collected by Lo et al. (2022) in "[Misinformed by visualization: What do we learn from misinformative visualizations?](https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.14559)"
   - Images should be downloaded using the script below
   - License for the QA pairs: CC-BY-SA 4.0
 
 - CHARTOM
-  - dataset introduced by Bharti et al. (2024) in "CHARTOM: A Visual Theory-of-Mind Benchmark for Multimodal Large Language Models"
+  - dataset introduced by Bharti et al. (2024) in "[CHARTOM: A Visual Theory-of-Mind Benchmark for Multimodal Large Language Models](https://arxiv.org/abs/2408.14419v1)"
   - Please contact the authors to get access to the dataset. Then, run the script below to process the dataset.
 
 - VLAT 
-  - dataset introduced by Lee et al. (2017) in "VLAT: Development of a Visualization Literacy Assessment Test"
+  - dataset introduced by Lee et al. (2017) in "[VLAT: Development of a Visualization Literacy Assessment Test](https://ieeexplore.ieee.org/abstract/document/7539634)"
   - Ready to use
 
 
@@ -96,6 +96,23 @@ Some correction methods require intermediate steps like extracting the axes or t
 ```
 $ python src/question_answering.py --datasets calvi-chartom-real_world-vlat --model internvl2.5/8B/
 ```
+
+The ```--datasets``` argument expects  a string of dataset names separated by  ```-```. By default, available datasets are  ```calvi```, ```chartom```, ```real_world```, and ```vlat```.
+
+The ```--model``` argument expects a string in the format ```model_name/model_size/```. By default, the following models are available:
+
+| Name     | Available sizes | 🤗 models   |
+| :---: | :---: | :---: |
+| internvl2.5    |  2B, 4B, 8B, 26B, 38B | [Link](https://huggingface.co/collections/OpenGVLab/internvl25-673e1019b66e2218f68d7c1c) |
+| ovis 1.6  | 9B, 27B | [Link](https://huggingface.co/collections/AIDC-AI/ovis2-67ab36c7e497429034874464) |
+| llava-v1.6-vicuna | 7B, 13B | [Link](https://huggingface.co/collections/llava-hf/llava-next-65f75c4afac77fd37dbbe6cf) |
+| qwen2vl      | 2B, 7B   | [Link](https://huggingface.co/collections/Qwen/qwen2-vl-66cee7455501d7126940800d)  |
+| chartinstruction | 13B | [Link](https://huggingface.co/lewy666/llava-hr-ChartInstruction)  |
+| chartgemma | 3B | [Link](https://huggingface.co/ahmed-masry/chartgemma) |
+| tinychart | 3B | [Link](https://huggingface.co/mPLUG/TinyChart-3B-768)  |
+
+
+
 
 If you want to use **TinyChart**: you need to copy [this folder](https://github.com/X-PLUG/mPLUG-DocOwl/tree/main/TinyChart/tinychart) and place it in the root folder of this repo
 
@@ -132,74 +149,9 @@ If you find this work relevant to your research or use this code in your work, p
 ```bibtex 
 @article{tonglet2025misleadingvisualizations,
   title={Protecting multimodal LLMs against misleading visualizations},
-  author={Tonglet, Jonathan and Tinne Tuytelaars and Marie-Francine Moens and Gurevych, Iryna},
+  author={Tonglet, Jonathan and Tuytelaars, Tinne and Moens, Marie-Francine and Gurevych, Iryna},
   journal={arXiv preprint arXiv:2502.XXXX},
   year={2025}
-}
-```
-
-Furthermore, if you use CALVI and/or the real-world dataset, please also cite:
-
-```bibtex 
-@inproceedings{10.1145/3544548.3581406,
-author = {Ge, Lily W. and Cui, Yuan and Kay, Matthew},
-title = {CALVI: Critical Thinking Assessment for Literacy in Visualizations},
-year = {2023},
-isbn = {9781450394215},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3544548.3581406},
-doi = {10.1145/3544548.3581406},
-articleno = {815},
-numpages = {18},
-keywords = {Information visualization, Measurement, Psychometrics, Visualization literacy, Visualization misinformation},
-location = {Hamburg, Germany},
-series = {CHI '23}
-}
-```
-
-```bibtex 
-@inproceedings{lo2022misinformed,
-  title={Misinformed by visualization: What do we learn from misinformative visualizations?},
-  author={Lo, Leo Yu-Ho and Gupta, Ayush and Shigyo, Kento and Wu, Aoyu and Bertini, Enrico and Qu, Huamin},
-  booktitle={Computer Graphics Forum},
-  volume={41},
-  number={3},
-  pages={515--525},
-  year={2022},
-  organization={Wiley Online Library},
-  doi={10.1111/cgf.14559},
-  url={https://onlinelibrary.wiley.com/doi/full/10.1111/cgf.14559}
-}
-```
-
-If you use CHARTOM, please cite:
-
-```bibtex 
-@article{bharti2024chartom,
-  title={CHARTOM: A Visual Theory-of-Mind Benchmark for Multimodal Large Language Models},
-  author={Bharti, Shubham and Cheng, Shiyun and Rho, Jihyun and Rao, Martina and Zhu, Xiaojin},
-  journal={arXiv preprint arXiv:2408.14419},
-  year={2024},
-  volume={abs/2408.14419},
-  url={https://arxiv.org/abs/2408.14419}
-}
-```
-
-If you use VLAT, please cite:
-
-```bibtex 
-@article{7539634,
-  author={Lee, Sukwon and Kim, Sung-Hee and Kwon, Bum Chul},
-  journal={IEEE Transactions on Visualization and Computer Graphics}, 
-  title={VLAT: Development of a Visualization Literacy Assessment Test}, 
-  year={2017},
-  volume={23},
-  number={1},
-  pages={551-560},
-  keywords={Data visualization;Reliability;Instruments;Bars;Conferences;Market research;Psychology;Visualization Literacy;Assessment Test;Instrument;Measurement;Aptitude;Education},
-  doi={10.1109/TVCG.2016.2598920},
-  url={https://ieeexplore.ieee.org/abstract/document/7539634}
 }
 ```
 
