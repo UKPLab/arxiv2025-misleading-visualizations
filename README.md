@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/github/license/UKPLab/ukp-project-template)](https://opensource.org/licenses/Apache-2.0)
 [![Python Versions](https://img.shields.io/badge/Python-3.9-blue.svg?style=flat&logo=python&logoColor=white)](https://www.python.org/)
 
-This repository contains the implementation of the arxiv preprint: Protecting Multimodal LLMs against misleading visualizations. The code is released under an **Apache 2.0** license.
+This repository contains the implementation of the arxiv preprint: [Protecting Multimodal LLMs against misleading visualizations](https://arxiv.org/abs/2502.20503). The code is released under an **Apache 2.0** license.
 
 Contact person: [Jonathan Tonglet](mailto:jonathan.tonglet@tu-darmstadt.de) 
 
@@ -150,8 +150,10 @@ If you find this work relevant to your research or use this code in your work, p
 @article{tonglet2025misleadingvisualizations,
   title={Protecting multimodal LLMs against misleading visualizations},
   author={Tonglet, Jonathan and Tuytelaars, Tinne and Moens, Marie-Francine and Gurevych, Iryna},
-  journal={arXiv preprint arXiv:2502.XXXX},
-  year={2025}
+  journal={arXiv preprint arXiv:2502.20503},
+  year={2025},
+  url={https://arxiv.org/abs/2502.20503},
+  doi={10.48550/arXiv.2502.20503}
 }
 ```
 
