@@ -15,6 +15,22 @@ if __name__=='__main__':
     #CHARTOM: A Visual Theory-of-Mind Benchmark for Multimodal Large Language Models
     #https://arxiv.org/abs/2408.14419
 
+    #Define mapping from CHARTOM misleader categories to the categories in CALVI and real-world data
+    misleader_map = {
+        'truncated y-axis': 'Truncated axis',
+        'wide y-axis range': 'Inappropriate axis range',
+        'inverted y-axis': 'Inverted axis',
+        'inconsistent x-axis unit': 'Inconsistent tick intervals',
+        'logarithmic y-axis': 'Inconsistent tick intervals',
+        'inverted x-axis': 'Inverted axis',
+        'dual axes': 'Dual axis',
+        'pictorial bars': 'Area encoding',
+        '3D effect': '3D',
+        '3D effect + pop-out': '3D',
+        'inverted color scale': 'Inverted axis'
+    }
+
+
     #Load files
     question_files = os.listdir('chartom/FACT_questions')
     answers = pd.read_csv('chartom/FACT_answer_keys.csv').set_index('chart id')
@@ -31,6 +47,8 @@ if __name__=='__main__':
         misleader_id =  q.split('Q')[0] + '*_2'
         chart_type = manipulations.loc[misleader_id,'chart type']
         misleader = manipulations.loc[misleader_id,'planted manipulation']
+        #Map misleaders to the CALVI and real-world categories
+        misleader = misleader_map[misleader.lstrip()]
         if answer_type in ['free text', 'rank']:
             choices = []
         else:
