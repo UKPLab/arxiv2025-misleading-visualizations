@@ -134,11 +134,11 @@
       <h2 class="title is-3 has-text-centered">What are misleading visualizations?</h2>
       <h2 class="subtitle has-text-justified">
         Charts are a useful tool to communicate data insights. However, deceiving design patterns, such as truncated, inverted, or dual axes, can distort the underlying data. This leads readers to inaccurate interpretations.
-        Such misleading visualizations are used to propagate and increase belief in misinformation during crises, and are effective to deceive humans. 
-        <span style="font-weight:bold;"> What about MLLMs?  </span> Are they vulnerable too? 
-        Yes! 😧 Their performance is close to random.
+        Such misleading visualizations are used to propagate and increase belief in misinformation during crises, and are effective to deceive humans. <br>
+        <span style="font-weight:bold;"> What about MLLMs?  </span> Are they vulnerable too?  <br>
+        Yes! 😧 Their chart QA performance is reduced to the level of the random baseline.
       </h2>
-      <img src="asssets/real_world_examples.png" height="100%"/>
+      <img src="static/images/real_world_examples.png" height="100%"/>
       <!-- <h2 class="subtitle has-text-centered">Example tasks in <span style="font-weight:bold;">BLINK</span>.</h2> -->
       <h2 class="hero-body has-text-centered">
         <!-- <br> -->
@@ -168,6 +168,24 @@
 <!-- End paper abstract -->
 
 
+<!-- Paper Qualitative -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">MLLMs are very vulnerable</h2>
+        <img src="static/images/accuracy.png" width="100%"/>
+        <!-- <h2 class="content has-text-centered">
+          Qualitative results on <b>MuirBench</b>. 
+        </h2> -->
+        <h2 class="content has-text-justified">
+          We compare the chart question-answering accuracy of 13 MLLMs on 3 datasets: (1) a collection of misleading visualizations, (2)  a collection of non-misleading visualizations, (3) the reference ChartQA benchmark, which contains non-misleading visualizations.<br>
+        </h2>
+        
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -178,12 +196,12 @@
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>@article{tonglet2025misleadingvisualizations,
-                  title={Protecting multimodal LLMs against misleading visualizations},
-                  author={Tonglet, Jonathan and Tuytelaars, Tinne and Moens, Marie-Francine and Gurevych, Iryna},
-                  journal={arXiv preprint arXiv:2502.20503},
-                  year={2025},
-                  url={https://arxiv.org/abs/2502.20503},
-                  doi={10.48550/arXiv.2502.20503}
+          title={Protecting multimodal LLMs against misleading visualizations},
+          author={Tonglet, Jonathan and Tuytelaars, Tinne and Moens, Marie-Francine and Gurevych, Iryna},
+          journal={arXiv preprint arXiv:2502.20503},
+          year={2025},
+          url={https://arxiv.org/abs/2502.20503},
+          doi={10.48550/arXiv.2502.20503}
       }</code></pre>
     </div>
 </section>
