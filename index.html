@@ -50,7 +50,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Protecting multimodal large language models against misleading visualizations</h1>
+            <h1 class="title is-1 publication-title"><img src="static/images/project_icon.png" width="50" />Protecting multimodal large language models against misleading visualizations</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -67,8 +67,8 @@
                   <div class="is-size-5 publication-authors">
                     <span class="author-block">
                       <sup>1</sup>UKP Lab, TU Darmstadt &emsp;
-                      <sup>2</sup>Department of Electrical Engineering, KU Leuven&emsp;
-                      <sup>3</sup>Department of Computer Science, KU Leuven&emsp;
+                      <sup>2</sup>Electrical Engineering, KU Leuven&emsp;
+                      <sup>3</sup>Computer Science, KU Leuven&emsp;
                     </span>
                   </div>
 
@@ -133,12 +133,12 @@
     <div class="hero-body">
       <h2 class="title is-3 has-text-centered">What are misleading visualizations?</h2>
       <h2 class="subtitle has-text-justified">
-        Charts are a useful tool to communicate data insights. However, deceiving design patterns, such as truncated, inverted, or dual axes, can distort the underlying data. This leads readers to inaccurate interpretations.
-        Such misleading visualizations are used to propagate and increase belief in misinformation during crises, and are effective to deceive humans. <br>
-        <span style="font-weight:bold;"> What about MLLMs?  </span> Are they vulnerable too?  <br>
-        Yes! 😧 Their chart QA performance is reduced to the level of the random baseline.
+        Charts are useful tools to communicate data insights. However, deceiving design patterns, such as truncated, inverted, or dual axes, can lead readers to inaccurate interpretations of the data.
+        Such misleading visualizations have been used to propagate and increase belief in misinformation during crises, and are effective to deceive humans. <br>
+        <span style="font-weight:bold;"> What about multimodal large language models (MLLMs)?  </span> Are they vulnerable too?
+        Yes! 😧 Their chart QA performance is reduced to the level of the random baseline, up to 65.5 percentage points lower than their QA performance on the ChartQA benchmark.
       </h2>
-      <img src="static/images/real_world_examples.png" height="100%"/>
+      <img src="static/images/real_world_examples.png" height="60%"/>
       <!-- <h2 class="subtitle has-text-centered">Example tasks in <span style="font-weight:bold;">BLINK</span>.</h2> -->
       <h2 class="hero-body has-text-centered">
         <!-- <br> -->
@@ -168,18 +168,52 @@
 <!-- End paper abstract -->
 
 
-<!-- Paper Qualitative -->
-<section class="section hero is-light">
+<!-- Accuracy -->
+<section class="section hero">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-five-sixths">
-        <h2 class="title is-3">MLLMs are very vulnerable</h2>
-        <img src="static/images/accuracy.png" width="100%"/>
-        <!-- <h2 class="content has-text-centered">
-          Qualitative results on <b>MuirBench</b>. 
-        </h2> -->
+        <h2 class="title is-3">MLLMs are vulnerable to misleading visualizations</h2>
+        <img src="static/images/accuracy.png" width="50%"/>
         <h2 class="content has-text-justified">
           We compare the chart question-answering accuracy of 13 MLLMs on 3 datasets: (1) a collection of misleading visualizations, (2)  a collection of non-misleading visualizations, (3) the reference ChartQA benchmark, which contains non-misleading visualizations.<br>
+          MLLMs perform much worse on misleading visualizations than on non-misleading ones. In fact, they do not perform on average better than random.
+        </h2>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Correction methods -->
+<section class="section hero is-ligth">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">How to mitigate this vulnerability?</h2>
+        <img src="static/images/correction_methods.png" width="50%"/>
+        <h2 class="content has-text-justified">
+          We propose six inference-time correction methods to mitigate the negative effects of misleading visualizations while preserving the high performance on non-misleading ones.
+        </h2>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Correction results -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-sixths">
+        <h2 class="title is-3">Table-based QA is the best correction method</h2>
+        <img src="static/images/correction_method_results.png" width="50%"/>
+        <h2 class="content has-text-justified">
+          Among all correction methods, the most promising is to extract the underlying table using a MLLM, then provide the table without the chart image to a text-only LLM, framing the task as Table-QA. <br>
+          However, gains are modest (~15–20 percentage points) and depend on table extraction quality—highlighting the need for further research! <br>
+          Learn more by reading our paper.
         </h2>
         
       </div>
@@ -216,6 +250,9 @@
 
           <p>
             This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+          </p>
+          <p>
+            <a href="https://www.flaticon.com/free-icons/benefit" title="benefit icons">Benefit icons created by Vectorslab - Flaticon</a>
           </p>
 
         </div>
