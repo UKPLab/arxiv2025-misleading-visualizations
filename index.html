@@ -5,8 +5,8 @@
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
   <meta name="description" content="Protecting multimodal large language models against misleading visualizations">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:title" content="Protecting multimodal LLMs against misleading visualizations"/>
+  <meta property="og:description" content="LLM, misleading visualization, question answering"/>
   <meta property="og:url" content="https://ukplab.github.io/misleading-visualizations/"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/image/your_twitter_banner_image.png" />
@@ -174,7 +174,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-five-sixths">
         <h2 class="title is-3">MLLMs are vulnerable to misleading visualizations</h2>
-        <img src="static/images/accuracy.png" width="60%"/>
+        <img src="static/images/accuracy.png" width="70%"/>
         <h2 class="content has-text-justified">
           We compare the chart question-answering accuracy of 13 MLLMs on 3 datasets: (1) a collection of misleading visualizations, (2)  a collection of non-misleading visualizations, (3) the reference ChartQA benchmark, which contains non-misleading visualizations.
           MLLMs perform much worse on misleading visualizations than on non-misleading ones. In fact, they do not perform on average better than random.
@@ -191,7 +191,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-five-sixths">
         <h2 class="title is-3">How to mitigate this vulnerability?</h2>
-        <img src="static/images/correction_methods.png" width="60%"/>
+        <img src="static/images/correction_methods.png" width="70%"/>
         <h2 class="content has-text-justified">
           We propose six inference-time correction methods to mitigate the negative effects of misleading visualizations while preserving the high performance on non-misleading ones.
         </h2>
@@ -209,7 +209,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-five-sixths">
         <h2 class="title is-3">Table-based QA is the best correction method</h2>
-        <img src="static/images/correction_method_results.png" width="65%"/>
+        <img src="static/images/correction_method_results.png" width="70%"/>
         <h2 class="content has-text-justified">
           Among all correction methods, the most promising is to extract the underlying table using a MLLM, then provide the table without the chart image to a text-only LLM, framing the task as Table-QA.
           However, gains are modest (~15–20 percentage points) and depend on table extraction quality—highlighting the need for further research!
