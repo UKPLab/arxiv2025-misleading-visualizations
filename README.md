@@ -21,7 +21,7 @@ Don't hesitate to send us an e-mail or report an issue, if something is broken (
 
 - Misleading visualizations are **charts that distort the underlying data**, leading readers to inaccurate interpretations 📊
   - Distortions include truncated and inverted axes, 3D effects, or inconsistent tick intervals
-  - Misleading negatively affect the performance of human readers in QA tasks. What about MLLMs?
+  - Misleading visusalizations negatively affect the performance of human readers in QA tasks. What about MLLMs?
 - MLLMs **are very vulnerable** to misleading visualizations too ⚠️
   - their QA performance drops to the level of the random baseline 
   - up to 65.5 percentage points decrease in accuracy compared to non-misleading visualization datasets like ChartQA
