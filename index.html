@@ -177,7 +177,7 @@
         <img src="static/images/accuracy.png" width="70%"/>
         <h2 class="content has-text-justified">
           We compare the chart question-answering accuracy of 13 MLLMs on 3 datasets: (1) a collection of misleading visualizations, (2)  a collection of non-misleading visualizations, (3) the reference ChartQA benchmark, which contains non-misleading visualizations.
-          MLLMs perform much worse on misleading visualizations than on non-misleading ones. In fact, they do not perform on average better than random.
+          MLLMs perform much worse on misleading visualizations than on non-misleading ones. In fact, they do not perform better than the random baseline on average.
         </h2>
         
       </div>
@@ -213,7 +213,7 @@
         <h2 class="content has-text-justified">
           Among all correction methods, the most promising is to extract the underlying table using a MLLM, then provide the table without the chart image to a text-only LLM, framing the task as Table-QA.
           However, gains are modest (~15–20 percentage points) and depend on table extraction quality—highlighting the need for further research!
-          Learn more by reading our paper.
+          Learn more by reading our paper and stay tuned for future work!
         </h2>
         
       </div>
