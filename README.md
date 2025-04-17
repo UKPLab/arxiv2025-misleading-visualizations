@@ -15,16 +15,17 @@ Don't hesitate to send us an e-mail or report an issue, if something is broken (
 
 ## Abstract 
 
-> We assess the vulnerability of multimodal large language models to misleading visualizations - charts that distort the underlying data  using techniques such as truncated or inverted axes, leading readers to draw inaccurate conclusions that may support misinformation or conspiracy theories. Our analysis shows that these distortions severely harm multimodal large language models, reducing their question-answering accuracy by up to 34.8 percentage points compared to non-misleading visualizations and lowering it to the level of the random baseline. To mitigate this vulnerability, we introduce six inference-time methods to improve performance of MLLMs on misleading visualizations while preserving their accuracy on non-misleading ones. The most effective approach involves (1) extracting the underlying data table and (2) using a text-only large language model to answer questions based on the table. This method improves performance on misleading visualizations by 15.4 to 19.6 percentage points.
+> We assess the vulnerability of multimodal large language models (MLLMs) to misleading visualizations, charts that distort the underlying data table  using deceptive techniques such as truncated or inverted axes, leading readers to draw inaccurate conclusions that may support disinformation. While MLLMs have shown steady improvement on standard chart reasoning benchmarks, our analysis reveals that their performance on misleading visualizations remains close to the level of the random baseline. To mitigate this vulnerability, we introduce six inference-time methods to improve the question-answering performance of MLLMs on misleading visualizations while preserving their higher accuracy on non-misleading ones. The most effective approach consists of (1) extracting the underlying data table and (2) using a text-only large language model to answer the question based on the table. This method improves question-answering performance on misleading visualizations by 15.4 to 19.6 percentage points.
 
 ## tl;dr
 
-- Misleading visualizations are **charts that distort the underlying data**, leading readers to inaccurate interpretations 📊
+- Misleading visualizations are **charts that distort the underlying data table**, leading readers to inaccurate interpretations that may support disinformation 📊
   - Distortions include truncated and inverted axes, 3D effects, or inconsistent tick intervals
   - Misleading visusalizations negatively affect the performance of human readers in QA tasks. What about MLLMs?
 - MLLMs **are very vulnerable** to misleading visualizations too ⚠️
-  - their QA performance drops to the level of the random baseline 
-  - up to 65.5 percentage points decrease in accuracy compared to non-misleading visualization datasets like ChartQA
+  - their QA performance drops 
+    - to the level of the random baseline 
+    - by up to 65.5 percentage points compared to the standard benchmark ChartQA
  
 <p align="center">
   <img width="65%" src="assets/accuracy.png" alt="header" />
@@ -32,7 +33,7 @@ Don't hesitate to send us an e-mail or report an issue, if something is broken (
 
 - We propose **six inference-time correction methods** to improve performance on misleading visualizations 🛠️
   - the best method is to extract the table using the MLLM, then answer with a LLM using the table only
-  - this improves performance by up to 19.6 percentage points
+  - this improves QA performance on misleading visualizations by up to 19.6 percentage points
 
 <p align="center">
   <img width="65%" src="assets/correction_method_results.png" alt="header" />
@@ -60,6 +61,10 @@ $ pip install -r requirements.txt
   - Ready to use 
   - License: CC-BY 4.0
 
+- Lauer & O'Brien
+  - dataset introduced by Lauer & O'Brien in "[The Deceptive Potential of Common Design Tactics Used in Data Visualizations](https://dl.acm.org/doi/10.1145/3380851.3416762)"
+  - Ready to use
+
 - Real-world
   - dataset introduced in this work, based on visualizations collected by Lo et al. (2022) in "[Misinformed by visualization: What do we learn from misinformative visualizations?](https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.14559)"
   - Images should be downloaded using the script below
@@ -67,7 +72,8 @@ $ pip install -r requirements.txt
 
 - CHARTOM
   - dataset introduced by Bharti et al. (2024) in "[CHARTOM: A Visual Theory-of-Mind Benchmark for Multimodal Large Language Models](https://arxiv.org/abs/2408.14419v1)"
-  - Please contact the authors to get access to the dataset. Then, run the script below to process the dataset.
+  - Please contact the authors to get access to the dataset. 
+  - Run the script below to process the dataset.
 
 - VLAT 
   - dataset introduced by Lee et al. (2017) in "[VLAT: Development of a Visualization Literacy Assessment Test](https://ieeexplore.ieee.org/abstract/document/7539634)"
@@ -97,7 +103,7 @@ Some correction methods require intermediate steps like extracting the axes or t
 $ python src/question_answering.py --datasets calvi-chartom-real_world-vlat --model internvl2.5/8B/
 ```
 
-The ```--datasets``` argument expects  a string of dataset names separated by  ```-```. By default, available datasets are  ```calvi```, ```chartom```, ```real_world```, and ```vlat```.
+The ```--datasets``` argument expects  a string of dataset names separated by  ```-```. By default, available datasets are  ```calvi```, ```chartom```, ```real_world```, ```lauer```, and ```vlat```.
 
 The ```--model``` argument expects a string in the format ```model_name/model_size/```. By default, the following models are available:
 
@@ -113,10 +119,11 @@ The ```--model``` argument expects a string in the format ```model_name/model_si
 
 
 
+If you want to use **TinyChart**: you need to copy [this folder](https://github.com/X-PLUG/mPLUG-DocOwl/tree/main/TinyChart/tinychart) and place it in the root folder of this repo.
 
-If you want to use **TinyChart**: you need to copy [this folder](https://github.com/X-PLUG/mPLUG-DocOwl/tree/main/TinyChart/tinychart) and place it in the root folder of this repo
+If you want to use **ChartInstruction**: you need to copy [this folder](https://github.com/zengxingchen/ChartQA-MLLM/tree/main/model/llava_hr) and place it in the root folder of this repo.
 
-If you want to use **ChartInstruction**: you need to copy [this folder](https://github.com/zengxingchen/ChartQA-MLLM/tree/main/model/llava_hr) and place it in the root folder of this repo
+We also provide code to conduct experiments with GPT4 and GPT4o using the Azure OpenAI API. You will first need to obtain an API key and store it as an environment variable.
 
 
 ### Generate metadata (table, axis)

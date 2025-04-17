@@ -25,8 +25,7 @@ if __name__=='__main__':
     dataset_file_paths = {'calvi': 'datasets/calvi_data.json',
                         'chartom': 'datasets/chartom_data.json',
                         'real_world': 'datasets/real_world_data.json',
-                        'vlat': 'datasets/vlat_data.json',
-                        'chartqa': 'datasets/chartqa_data.json',
+                        'vlat': 'datasets/vlat_data.json'
                         }   
 
     

@@ -48,7 +48,7 @@ if __name__=='__main__':
                         'chartom': 'datasets/chartom_data.json',
                         'real_world': 'datasets/real_world_data.json',
                         'vlat': 'datasets/vlat_data.json',
-                        'chartqa': 'datasets/chartqa_data.json',
+                        'lauer': 'datasets/lauer_data.json'
                         }
     #Warning messages
     misleader_warnings = {'inverted axis': 'the y-axis displays values increasing from top to bottom or the x-axis displays values increasing from right to left.', 
