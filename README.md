@@ -26,6 +26,7 @@ Don't hesitate to send us an e-mail or report an issue, if something is broken (
   - their QA performance drops 
     - to the level of the random baseline 
     - by up to 65.5 percentage points compared to the standard benchmark ChartQA
+  - they cannot answer questions consistently depending on whether they observe a misleading or non-misleading visualization of the same data
  
 <p align="center">
   <img width="65%" src="assets/accuracy.png" alt="header" />
@@ -62,7 +63,7 @@ $ pip install -r requirements.txt
   - License: CC-BY 4.0
 
 - Lauer & O'Brien
-  - dataset introduced by Lauer & O'Brien in "[The Deceptive Potential of Common Design Tactics Used in Data Visualizations](https://dl.acm.org/doi/10.1145/3380851.3416762)"
+  - dataset introduced by Lauer & O'Brien (2020) in "[The Deceptive Potential of Common Design Tactics Used in Data Visualizations](https://dl.acm.org/doi/10.1145/3380851.3416762)"
   - Ready to use
 
 - Real-world
@@ -123,7 +124,7 @@ If you want to use **TinyChart**: you need to copy [this folder](https://github.
 
 If you want to use **ChartInstruction**: you need to copy [this folder](https://github.com/zengxingchen/ChartQA-MLLM/tree/main/model/llava_hr) and place it in the root folder of this repo.
 
-We also provide code to conduct experiments with GPT4 and GPT4o using the Azure OpenAI API. You will first need to obtain an API key and store it as an environment variable.
+We also provide code to conduct experiments with GPT4 and GPT4o using the [Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/ai-services/openai/overview). You will first need to obtain an API key and store it as an environment variable.
 
 
 ### Generate metadata (table, axis)

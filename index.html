@@ -133,16 +133,16 @@
     <div class="hero-body">
       <h2 class="title is-3 has-text-centered">What are misleading visualizations?</h2>
       <h2 class="subtitle has-text-justified">
-        Charts are useful tools to communicate data insights. However, deceiving design patterns, such as truncated, inverted, or dual axes, can lead readers to inaccurate interpretations of the data.
-        Such misleading visualizations have been used to propagate and increase belief in misinformation during crises, and are effective to deceive humans. <br>
+        Charts are useful tools to communicate data insights. However, deceiving design patterns, such as truncated, inverted, or dual axes, can lead readers to inaccurate interpretations of the underlying data.
+        Such misleading visualizations have been used to propagate and increase belief in disinformation during crises, and are effective to deceive humans. <br>
         <span style="font-weight:bold;"> What about multimodal large language models (MLLMs)?   Are they vulnerable too? </span>
-        Yes! 😧 Their chart QA performance is reduced to the level of the random baseline, up to 65.5 percentage points lower than their QA performance on the ChartQA benchmark.
+        Yes! 😧 Their chart QA performance is reduced to the level of the random baseline, up to 65.5 percentage points lower than their performance on the ChartQA benchmark.
       </h2>
       <img src="static/images/real_world_examples.png" height="60%"/>
       <!-- <h2 class="subtitle has-text-centered">Example tasks in <span style="font-weight:bold;">BLINK</span>.</h2> -->
       <h2 class="hero-body has-text-centered">
         <!-- <br> -->
-        Two examples of misleading visualizations with QA pairs.
+        Three examples of misleading visualizations with QA pairs.
       </h2>
     </div>
   </div>
@@ -158,7 +158,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We assess the vulnerability of multimodal large language models to misleading visualizations - charts that distort the underlying data using techniques such as truncated or inverted axes, leading readers to draw inaccurate conclusions that may support misinformation or conspiracy theories. Our analysis shows that these distortions severely harm multimodal large language models, reducing their question-answering accuracy to the level of the random baseline. To mitigate this vulnerability, we introduce six inference-time methods to improve performance of MLLMs on misleading visualizations while preserving their accuracy on non-misleading ones. The most effective approach involves (1) extracting the underlying data table and (2) using a text-only large language model to answer questions based on the table. This method improves performance on misleading visualizations by 15.4 to 19.6 percentage points.
+            We assess the vulnerability of multimodal large language models (MLLMs) to misleading visualizations, charts that distort the underlying data table  using deceptive techniques such as truncated or inverted axes, leading readers to draw inaccurate conclusions that may support disinformation. While MLLMs have shown steady improvement on standard chart reasoning benchmarks, our analysis reveals that their performance on misleading visualizations remains close to the level of the random baseline. To mitigate this vulnerability, we introduce six inference-time methods to improve the question-answering performance of MLLMs on misleading visualizations while preserving their higher accuracy on non-misleading ones. The most effective approach consists of (1) extracting the underlying data table and (2) using a text-only large language model to answer the question based on the table. This method improves question-answering performance on misleading visualizations by 15.4 to 19.6 percentage points.
           </p>
         </div>
       </div>
@@ -176,7 +176,7 @@
         <h2 class="title is-3">MLLMs are vulnerable to misleading visualizations</h2>
         <img src="static/images/accuracy.png" width="70%"/>
         <h2 class="content has-text-justified">
-          We compare the chart question-answering accuracy of 13 MLLMs on 3 datasets: (1) a collection of misleading visualizations, (2)  a collection of non-misleading visualizations, (3) the reference ChartQA benchmark, which contains non-misleading visualizations.
+          We compare the chart question-answering accuracy of 16 MLLMs on 3 datasets: (1) a collection of misleading visualizations, (2)  a collection of non-misleading visualizations, (3) the reference ChartQA benchmark, which contains non-misleading visualizations.
           MLLMs perform much worse on misleading visualizations than on non-misleading ones. In fact, they do not perform better than the random baseline on average.
         </h2>
         
