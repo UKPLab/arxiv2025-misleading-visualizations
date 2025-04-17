@@ -3,6 +3,7 @@ import ast
 import numpy as np
 import math
 from statsmodels.stats.contingency_tables import mcnemar
+from scipy.stats import ttest_rel
 
 def evaluate_dataset(dataset, 
                      ground_truth='best_answer',
@@ -67,12 +68,25 @@ def compute_mcnemar_table(predictions1, predictions2):
             table[1, 1] += 1  
     return table
 
-def compute_significance_score(predictions_model1, predictions_model2):
+def compute_mcnemmar_significance_score(predictions_model1, predictions_model2):
     contingency_table = compute_mcnemar_table(predictions_model1, predictions_model2)
     result = mcnemar(contingency_table, exact=True)
     print("McNemar test statistic:", result.statistic)
     print("p-value:", result.pvalue)
     return result.pvalue, result.statistic
+
+
+def compute_paired_t_test_significance_score(non_misleading_values, misleading_values):
+    '''
+    Compute whether the Likert-scale ratings are significantly different given a non-misleading visualization or a misleading one.
+    Args:
+        non_misleading_values (list): ratings for all MLLMs for the non-misleading version of a given dataset pair
+        misleading_values (list): ratings for all MLLMs for the misleading version of a given dataset pair
+    '''
+    stat, p_value = ttest_rel(non_misleading_values, misleading_values)
+    print("Paired t-test statistic:", stat)
+    print("p-value:", p_value)
+    return p_value, stat
 
 
 def evaluate_qa(predictions, references, answer_types, num_threshold=0.05):

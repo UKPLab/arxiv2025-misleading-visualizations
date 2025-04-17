@@ -1,0 +1,154 @@
+[
+    {
+        "image_id": "bar_1",
+        "image_path": "lauer_examples/bar_1.png", 
+        "control title": "Home sales show increase from 2015-2016",
+        "exaggerated title": "Huge increase in home sales from 2015-2016!",
+        "question": "How much did home sales increase from 2015-2016? Answer based on the chart with a single digit on a Likert scale ranging from 1 to 6, where 1 means 'a little' and 6 means 'a lot'.",
+        "choices": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "misleader": "N/A",
+        "best_answer": "N/A",
+        "chart_type": "bar",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_id": "bar_2",
+        "image_path": "lauer_examples/bar_2.png", 
+        "control title": "Home sales show increase from 2015-2016",
+        "exaggerated title": "Huge increase in home sales from 2015-2016!",
+        "question": "How much did home sales increase from 2015-2016? Answer based on the chart with a single digit on a Likert scale ranging from 1 to 6, where 1 means 'a little' and 6 means 'a lot'.",
+        "choices": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "misleader": "Truncated axis",
+        "best_answer": "N/A",
+        "chart_type": "bar",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_id": "bubble_1",
+        "image_path": "lauer_examples/bubble_1.png", 
+        "control title": "ABC University graduates more student than the national average",
+        "exaggerated title": "ABC University boasts much higher graduation rate than the national average!",
+        "question": "How much better is ABC's graduation rate than the national average? Answer based on the chart with a single digit on a Likert scale ranging from 1 to 6, where 1 means 'a little' and 6 means 'a lot'.",
+        "choices": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "misleader": "N/A",
+        "best_answer": "N/A",
+        "chart_type": "bubble",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_id": "bubble_2",
+        "image_path": "lauer_examples/bubble_2.png", 
+        "control title": "ABC University graduates more student than the national average",
+        "exaggerated title": "ABC University boasts much higher graduation rate than the national average!",
+        "question": "How much better is ABC's graduation rate than the national average? Answer based on the chart with a single digit on a Likert scale ranging from 1 to 6, where 1 means 'a little' and 6 means 'a lot'.",
+        "choices": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "misleader": "Misrepresentation",
+        "best_answer": "N/A",
+        "chart_type": "bubble",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_id": "line_1",
+        "image_path": "lauer_examples/line_1.png", 
+        "control title": "Box Office continues to climb in 2016",
+        "exaggerated title": "Box Office smashes sales record!",
+        "question": "How much have home box-office sales increased from 2006 to 2016? Answer based on the chart with a single digit on a Likert scale ranging from 1 to 6, where 1 means 'a little' and 6 means 'a lot'.",
+        "choices": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "misleader": "N/A",
+        "best_answer": "N/A",
+        "chart_type": "line",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_id": "line_2",
+        "image_path": "lauer_examples/line_2.png", 
+        "control title": "Box Office continues to climb in 2016",
+        "exaggerated title": "Box Office smashes sales record!",
+        "question": "How much have home box-office sales increased from 2006 to 2016? Answer based on the chart with a single digit on a Likert scale ranging from 1 to 6, where 1 means 'a little' and 6 means 'a lot'.",
+        "choices": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "misleader": "Truncated axis",
+        "best_answer": "N/A",
+        "chart_type": "line",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_id": "pie_1",
+        "image_path": "lauer_examples/pie_1.png", 
+        "control title": "Hotdogs preferred by small margin over other concessions",
+        "exaggerated title": "Hotdogs are the clear favorite among baseball fans!",
+        "question": "By how much did hotdogs outsell the next highest selling concession? Answer based on the chart with a single digit on a Likert scale ranging from 1 to 6, where 1 means 'a little' and 6 means 'a lot'.",
+        "choices": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "misleader": "N/A",
+        "best_answer": "N/A",
+        "chart_type": "pie",
+        "answer_type": "multiple choice"
+    },
+    {
+        "image_id": "pie_2",
+        "image_path": "lauer_examples/pie_2.png",
+        "control title": "Hotdogs preferred by small margin over other concessions",
+        "exaggerated title": "Hotdogs are the clear favorite among baseball fans!",
+        "question": "By how much did hotdogs outsell the next highest selling concession? Answer based on the chart with a single digit on a Likert scale ranging from 1 to 6, where 1 means 'a little' and 6 means 'a lot'.",
+        "choices": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+        ],
+        "misleader": "3D",
+        "best_answer": "N/A",
+        "chart_type": "pie",
+        "answer_type": "multiple choice"
+    }
+]
