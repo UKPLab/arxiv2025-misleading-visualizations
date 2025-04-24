@@ -24,7 +24,7 @@ def get_EM(prediction, reference):
     prediction = post_process_prediction(prediction).lower().strip()
     if type(reference)==str:
         reference = reference.lower().strip()
-        if prediction == reference:
+        if prediction.replace('\n', '') == reference:
             return 1
         if is_substring(reference, prediction) and reference!='n/a':
             #Prediction is more verbose than the reference but contains the reference
@@ -112,10 +112,17 @@ def evaluate_qa(predictions, references, answer_types, num_threshold=0.05):
         elif a == 'rank':
             #Convert the reference to a list and check whether the items appear in order in the output
             r = ast.literal_eval(r)
-            if is_list_in_order(r, p):
-                scores.append(1)
+            if type(r[0])!=list:
+                if is_list_in_order(r, p):
+                    scores.append(1)
+                else:
+                    scores.append(0)
             else:
-                scores.append(0)
+                #There are two reference lists
+                if is_list_in_order(r[0], p) or is_list_in_order(r[1], p):
+                    scores.append(1)
+                else:
+                    scores.append(0)
         else:
             raise ValueError('Invalid answer type')
     accuracy = sum(scores)/len(scores)

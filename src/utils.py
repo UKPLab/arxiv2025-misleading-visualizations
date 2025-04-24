@@ -39,10 +39,20 @@ def load_json(file_path):
 
 def is_list_in_order(l, sentence):
     """
-    Check if elements of the list appear in the given sentence in order.
+    Check if elements of the list appear in the given sentence (the prediction) in order.
     """
-    iterator = iter(sentence)
-    return all(item in iterator for item in l)
+    pos = 0
+    text = sentence.lower()
+
+    for item in l:
+        token = re.escape(str(item).lower())
+        regex = re.compile(rf"\b{token}\b") 
+        match = regex.search(text, pos) 
+        if not match:
+            return False
+        # Next search must start after the end of this occurrence
+        pos = match.end()
+    return True
 
 
 def is_substring(ref, pred):
