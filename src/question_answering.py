@@ -34,7 +34,7 @@ if __name__=='__main__':
     print(f'Generating answers for model {m}')
 
     #Load model
-    if m=='GPT4V' or m=='GPT4o':
+    if m in ['GPT4V', 'GPT4o', 'gemini-1.5-flash', 'gemini-1.5_pro']:
         model, tokenizer, image_processor, context_len= m, '', '', ''
     else:
         # pass

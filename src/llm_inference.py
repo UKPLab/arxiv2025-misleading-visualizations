@@ -2,6 +2,8 @@ from openai import AzureOpenAI
 import os
 import numpy as np
 import time
+from google import genai
+import mimetypes
 from utils import *
 
 
@@ -10,11 +12,12 @@ SLEEP = 5
 
 #Replace by your environment variables
 try:
-    client = AzureOpenAI(
+    gpt_client = AzureOpenAI(
                 api_key=os.getenv("YOUR_ENVIRONMENT_VARIABLE_CONTAINING_YOUR_AZURE_API_KEY"),  
                 api_version="2023-10-01-preview",
                 azure_endpoint = os.getenv("YOUR_ENVIRONMENT_VARIABLE_CONTAINING_YOUR_AZURE_ENDPOINT")
                 )
+    gemini_client = genai.Client(api_key=os.getenv("YOUR_ENVIRONMENT_VARIABLE_CONTAINING_YOUR_GEMINI_API_KEY"))
 except:
     pass
 
@@ -163,7 +166,7 @@ def generate_answer_gpt4v(image_path, prompt, tokenizer, image_processor, contex
     ]
 
     try:
-        completion = client.chat.completions.create(model=deployment_name, 
+        completion = gpt_client.chat.completions.create(model=deployment_name, 
                                                     temperature=0,
                                                     messages=messages, 
                                                     max_tokens=max_tokens)
@@ -173,6 +176,38 @@ def generate_answer_gpt4v(image_path, prompt, tokenizer, image_processor, contex
         output = e
     time.sleep(SLEEP)
     return output
+
+
+def generate_answer_gemini(image_path, prompt, tokenizer, image_processor, context_len, model, max_tokens):
+    #Prepare input
+    if image_path:
+        with open(image_path, 'rb') as f:
+            img_bytes = f.read()
+        media_type, _ = mimetypes.guess_type(image_path)
+        if media_type is None:                  
+            media_type = "image/png"
+    content = (genai.types.Part.from_bytes(
+                data=img_bytes,
+                mime_type=media_type,
+                ), 
+                prompt
+            )
+    #Generate response
+    response = gemini_client.models.generate_content(contents= content, 
+                                                     model= model,
+                                              config={
+                                                "temperature": 0.0,
+                                                "top_p": 1,
+                                                "top_k": 1,
+                                                "max_output_tokens": max_tokens
+                                            }
+                                            )
+    output = response.text
+    usage_input = response.usage_metadata.prompt_token_count
+    usage_output = response.usage_metadata.candidates_token_count
+    usage = usage_input + usage_output
+    time.sleep(SLEEP)
+    return output, usage
 
 
 def generate_answer(image_path, prompt, tokenizer, image_processor, context_len, model, template, max_tokens=200):
@@ -189,7 +224,9 @@ def generate_answer(image_path, prompt, tokenizer, image_processor, context_len,
                   'tinychart': generate_answer_tinychart,
                   #Closed-source models
                   'gpt4V': generate_answer_gpt4v,
-                  'gpt4o':generate_answer_gpt4v
+                  'gpt4o':generate_answer_gpt4v,
+                  'gemini-1.5-flash': generate_answer_gemini,
+                  'gemini-1.5-pro': generate_answer_gemini
                   }
     if template!='internvl2.5/38B/':
         generation_type = template.split('/')[0]
