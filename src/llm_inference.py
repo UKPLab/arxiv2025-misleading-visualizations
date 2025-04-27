@@ -203,11 +203,9 @@ def generate_answer_gemini(image_path, prompt, tokenizer, image_processor, conte
                                             }
                                             )
     output = response.text
-    usage_input = response.usage_metadata.prompt_token_count
-    usage_output = response.usage_metadata.candidates_token_count
     usage = usage_input + usage_output
     time.sleep(SLEEP)
-    return output, usage
+    return output
 
 
 def generate_answer(image_path, prompt, tokenizer, image_processor, context_len, model, template, max_tokens=200):
