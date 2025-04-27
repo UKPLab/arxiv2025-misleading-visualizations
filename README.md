@@ -15,7 +15,7 @@ Don't hesitate to send us an e-mail or report an issue, if something is broken (
 
 ## Abstract 
 
-> Visualizations play a pivotal role in daily communication in an increasingly data-driven world. Research on multimodal large language models (MLLMs) for automated chart understanding has accelerated massively, with steady improvements on standard benchmarks. However, for MLLMs to be reliable, they must be robust to misleading visualizations, charts that distort the underlying data, leading readers to draw inaccurate conclusions that may support disinformation. Here, we uncover an important vulnerability: MLLM question-answering accuracy on misleading visualizations drops to the level of a random baseline. To address this, we introduce the first inference-time methods to improve performance on misleading visualizations, without compromising accuracy on non-misleading ones. The most effective method extracts the underlying data table and uses a text-only LLM to answer the question based on the table. Our findings expose a critical blind spot in current research and establish benchmark results to guide future efforts in reliable MLLM research.
+> Visualizations play a pivotal role in daily communication in an increasingly data-driven world. Research on multimodal large language models (MLLMs) for automated chart understanding has accelerated massively, with steady improvements on standard benchmarks. However, for MLLMs to be reliable, they must be robust to misleading visualizations, charts that distort the underlying data, leading readers to draw inaccurate conclusions that may support disinformation. Here, we uncover an important vulnerability: MLLM question-answering accuracy on misleading visualizations drops on average to the level of a random baseline. To address this, we introduce the first inference-time methods to improve performance on misleading visualizations, without compromising accuracy on non-misleading ones. The most effective method extracts the underlying data table and uses a text-only LLM to answer the question based on the table. Our findings expose a critical blind spot in current research and establish benchmark results to guide future efforts in reliable MLLMs.
 
 ## tl;dr
 
@@ -35,6 +35,8 @@ Don't hesitate to send us an e-mail or report an issue, if something is broken (
 - We propose **six inference-time correction methods** to improve performance on misleading visualizations 🛠️
   - the best method is to extract the table using the MLLM, then answer with a LLM using the table only
   - this improves QA performance on misleading visualizations by up to 19.6 percentage points
+  - However this degrades the performance on non-misleading visualizations
+  - An alternative is to redraw the chart based on the extracted table, yielding smaller improvements
 
 <p align="center">
   <img width="65%" src="assets/correction_method_results.png" alt="header" />
@@ -124,7 +126,7 @@ If you want to use **TinyChart**: you need to copy [this folder](https://github.
 
 If you want to use **ChartInstruction**: you need to copy [this folder](https://github.com/zengxingchen/ChartQA-MLLM/tree/main/model/llava_hr) and place it in the root folder of this repo.
 
-We also provide code to conduct experiments with GPT4, GPT4o, and Gemini-1.5 pro and flash using the [Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/ai-services/openai/overview) and the [Google AI Studio](https://aistudio.google.com/). You will first need to obtain API keys from both providers and store them as environment variables.
+We also provide code to conduct experiments with GPT4, GPT4o, Gemini-1.5-flash, and Gemini-1.5-pro using the [Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/ai-services/openai/overview) and the [Google AI Studio](https://aistudio.google.com/). You will first need to obtain API keys from both providers and store them as environment variables.
 
 
 ### Generate metadata (table, axis)
