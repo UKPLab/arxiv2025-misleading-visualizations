@@ -203,7 +203,6 @@ def generate_answer_gemini(image_path, prompt, tokenizer, image_processor, conte
                                             }
                                             )
     output = response.text
-    usage = usage_input + usage_output
     time.sleep(SLEEP)
     return output
 
