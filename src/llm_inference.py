@@ -223,8 +223,8 @@ def generate_answer(image_path, prompt, tokenizer, image_processor, context_len,
                   'chartgemma': generate_answer_chartgemma,
                   'tinychart': generate_answer_tinychart,
                   #Closed-source models
-                  'gpt4V': generate_answer_gpt4v,
-                  'gpt4o':generate_answer_gpt4v,
+                  'GPT4V': generate_answer_gpt4v,
+                  'GPT4o':generate_answer_gpt4v,
                   'gemini-1.5-flash': generate_answer_gemini,
                   'gemini-1.5-pro': generate_answer_gemini
                   }
