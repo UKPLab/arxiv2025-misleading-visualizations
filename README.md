@@ -11,6 +11,9 @@ Contact person: [Jonathan Tonglet](mailto:jonathan.tonglet@tu-darmstadt.de)
 
 Don't hesitate to send us an e-mail or report an issue, if something is broken (and it shouldn't be) or if you have further questions. 
 
+## News 📢
+
+- We released a follow-up work ["Is this chart lying to me? Automating the detection of misleading visualizations"](https://arxiv.org/abs/2508.21675), check it out 🔥
 
 
 ## Abstract 
