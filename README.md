@@ -78,7 +78,7 @@ $ pip install -r requirements.txt
 
 - CHARTOM
   - dataset introduced by Bharti et al. (2024) in "[CHARTOM: A Visual Theory-of-Mind Benchmark for Multimodal Large Language Models](https://arxiv.org/abs/2408.14419v1)"
-  - Please contact the authors to get access to the dataset. 
+  - Please contact the authors of CHARTOM to get access to the dataset. 
   - Run the script below to process the dataset.
 
 - VLAT 
