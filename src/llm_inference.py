@@ -1,3 +1,4 @@
+import anthropic
 from openai import AzureOpenAI
 import os
 import numpy as np
@@ -18,6 +19,13 @@ try:
                 azure_endpoint = os.getenv("YOUR_ENVIRONMENT_VARIABLE_CONTAINING_YOUR_AZURE_ENDPOINT")
                 )
     gemini_client = genai.Client(api_key=os.getenv("YOUR_ENVIRONMENT_VARIABLE_CONTAINING_YOUR_GEMINI_API_KEY"))
+except:
+    pass
+
+try:
+    anthropic_client = anthropic.Anthropic(
+            api_key=os.getenv("YOUR_ENVIRONMENT_VARIABLE_CONTAINING_YOUR_ANTHROPIC_API_KEY")
+            )
 except:
     pass
 
@@ -207,6 +215,39 @@ def generate_answer_gemini(image_path, prompt, tokenizer, image_processor, conte
     return output
 
 
+def generate_answer_claude(image_path, prompt, tokenizer, image_processor, context_len, model, max_tokens):
+    with open(image_path, "rb") as image_file:
+        image64 = base64.standard_b64encode(image_file.read()).decode("utf-8")
+    media_type, _ = mimetypes.guess_type(image_path)
+    if media_type is None:                  
+        media_type = "image/png"
+    messages= [
+        {"role": "user", "content":       
+            [
+                {
+                    "type": "image",
+                    "source": {
+                        "type": "base64",
+                        "media_type": media_type,
+                        "data": image64,
+                    },
+                },
+                {
+                    "type": "text",
+                    "text": prompt
+                }
+            ],}
+        ]
+    response = anthropic_client.messages.create(
+                    model="claude-3-5-sonnet-20240620",
+                    max_tokens=max_tokens,
+                    messages= messages
+                    )
+    output = response.content[0].text
+    time.sleep(SLEEP)
+    return output, _
+
+
 def generate_answer(image_path, prompt, tokenizer, image_processor, context_len, model, template, max_tokens=200):
     prompt_map = {
                   'internvl2.5': generate_answer_internvl2, 
@@ -223,7 +264,8 @@ def generate_answer(image_path, prompt, tokenizer, image_processor, context_len,
                   'GPT4V': generate_answer_gpt4v,
                   'GPT4o':generate_answer_gpt4v,
                   'gemini-1.5-flash': generate_answer_gemini,
-                  'gemini-1.5-pro': generate_answer_gemini
+                  'gemini-1.5-pro': generate_answer_gemini,
+                  'claude-3.5-sonnet': generate_answer_claude
                   }
     if template!='internvl2.5/38B/':
         generation_type = template.split('/')[0]

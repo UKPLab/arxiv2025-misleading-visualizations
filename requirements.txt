@@ -1,4 +1,5 @@
 accelerate
+anthropic
 bitsandbytes
 einops
 flash_attn==2.5.8
