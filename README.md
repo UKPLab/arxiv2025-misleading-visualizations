@@ -129,7 +129,7 @@ If you want to use **TinyChart**: you need to copy [this folder](https://github.
 
 If you want to use **ChartInstruction**: you need to copy [this folder](https://github.com/zengxingchen/ChartQA-MLLM/tree/main/model/llava_hr) and place it in the root folder of this repo.
 
-We also provide code to conduct experiments with GPT4, GPT4o, Gemini-1.5-flash, and Gemini-1.5-pro using the [Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/ai-services/openai/overview) and the [Google AI Studio](https://aistudio.google.com/). You will first need to obtain API keys from both providers and store them as environment variables.
+We also provide code to conduct experiments with GPT4, GPT4o, Gemini-1.5-flash, Gemini-1.5-pro, and Claude-3.5-Sonnet using the [Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/ai-services/openai/overview), [Google AI Studio](https://aistudio.google.com/), and [Claude Developer Platform](https://console.anthropic.com/). You will first need to obtain API keys from both providers and store them as environment variables.
 
 
 ### Generate metadata (table, axis)
