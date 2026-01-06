@@ -17,6 +17,7 @@ if __name__=='__main__':
     parser.add_argument('--datasets', type=str, default='calvi-chartom-real_world-vlat',  help="Datasets, separated by -")
     parser.add_argument('--output_folder', type=str, required=True,  help="The folder to store the predictions json files")
     parser.add_argument('--model', type=str, required=True,  help="Name of the model to run")
+    parser.add_argument('--cot', type=int, choices=[0,1], default=0, help="1 to use zero-shot CoT")
     parser.add_argument('--prompt_type', type=str, choices=['standard', 'warning_message'], default='standard', help="Type of prompt to use")
     parser.add_argument('--max_tokens', type=int, default=200,  help="Max number of generated tokens")
     parser.add_argument('--table_folder', type=str, default='',  help="Folder containing the table representations of the charts.")
@@ -34,7 +35,7 @@ if __name__=='__main__':
     print(f'Generating answers for model {m}')
 
     #Load model
-    if m in ['GPT4V', 'GPT4o', 'gemini-1.5-flash', 'gemini-1.5_pro']:
+    if m in ['GPT4V', 'GPT4o', 'gemini-1.5-flash', 'gemini-1.5_pro', 'claude-3.5-sonnet']:
         model, tokenizer, image_processor, context_len= m, '', '', ''
     else:
         # pass
@@ -130,8 +131,9 @@ if __name__=='__main__':
                                     dataset[d]['choices'], 
                                     dataset[d]['answer_type'],
                                     template=m,
-                                    warning_message= warning_message,
-                                    image_input = args.image_input,
+                                    cot=args.cot,
+                                    warning_message=warning_message,
+                                    image_input=args.image_input,
                                     table_input=table_input,
                                     table=table,
                                     axis_input=axis_input,

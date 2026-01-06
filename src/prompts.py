@@ -12,6 +12,7 @@ def create_qa_prompt(question,
                      choices, 
                      answer_type='multiple choice', 
                      template='qwen2vl', 
+                     cot=False,
                      warning_message=None,
                      image_input=True,
                      table_input=False,  
@@ -45,8 +46,13 @@ def create_qa_prompt(question,
         prompt+= '\nBe careful, the following design flaw has been identified in the chart: ' + warning_message
     else:
         pass
+    
+    #CoT or Direct prompting
+    if cot:
+        prompt += "\nAnswer with detailed reasoning steps and provide your final answer as 'Answer: your_answer'. Let's think step by step.\n"
+    else:
 
-    prompt+= "\nProvide only the final answer to the question.\n"
+        prompt+= "\nProvide only the final answer to the question.\n"
 
     if template=='internvl2':
         prompt = '<image>\n' + prompt
