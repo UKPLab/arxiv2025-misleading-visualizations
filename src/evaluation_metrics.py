@@ -3,7 +3,7 @@ import ast
 import numpy as np
 import math
 from statsmodels.stats.contingency_tables import mcnemar
-from scipy.stats import ttest_rel
+from scipy.stats import wilcoxon
 
 def evaluate_dataset(dataset, 
                      ground_truth='best_answer',
@@ -83,8 +83,8 @@ def compute_paired_t_test_significance_score(non_misleading_values, misleading_v
         non_misleading_values (list): ratings for all MLLMs for the non-misleading version of a given dataset pair
         misleading_values (list): ratings for all MLLMs for the misleading version of a given dataset pair
     '''
-    stat, p_value = ttest_rel(non_misleading_values, misleading_values)
-    print("Paired t-test statistic:", stat)
+    stat, p_value = wilcoxon(non_misleading_values, misleading_values)
+    print("Wilcoxon signed-rank statistic:", stat)
     print("p-value:", p_value)
     return p_value, stat
 
@@ -127,6 +127,25 @@ def evaluate_qa(predictions, references, answer_types, num_threshold=0.05):
             raise ValueError('Invalid answer type')
     accuracy = sum(scores)/len(scores)
     return accuracy
+
+def bootstrap_ci(dataset, answer_key, n_bootstrap=5000, seed=42):
+    """
+    Bootstrap CI for Experiment 1 accuracy.
+    """
+    rng = np.random.default_rng(seed)
+    n = len(dataset)
+    scores = []
+
+    for _ in range(n_bootstrap):
+        indices = rng.integers(0, n, n)  # resample with replacement
+        sample = [dataset[i] for i in indices]
+        score = evaluate_dataset(sample, answer_key)
+        scores.append(score)
+
+    lower = np.percentile(scores, 2.5)
+    upper = np.percentile(scores, 97.5)
+
+    return lower, upper
 
 def compute_random_baseline(split='misleading'):
     calvi_misleading = load_json('datasets/calvi_data.json')[:45]
