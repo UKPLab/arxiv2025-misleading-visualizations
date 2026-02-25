@@ -76,7 +76,7 @@ def compute_mcnemmar_significance_score(predictions_model1, predictions_model2):
     return result.pvalue, result.statistic
 
 
-def compute_paired_t_test_significance_score(non_misleading_values, misleading_values):
+def compute_wilcixon_significance_score(non_misleading_values, misleading_values):
     '''
     Compute whether the Likert-scale ratings are significantly different given a non-misleading visualization or a misleading one.
     Args:
