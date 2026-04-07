@@ -13,6 +13,8 @@ Don't hesitate to send us an e-mail or report an issue, if something is broken (
 
 ## News 📢
 
+- Our paper has been accepted to ACL 2026 Main conference 🔥 See you in San Diego 🌊
+
 - We released a follow-up work ["ChartAttack: Testing the Vulnerability of LLMs to Malicious Prompting in Chart Generation"](https://arxiv.org/abs/2601.12983), check it out 🔥
 - We released a follow-up work ["Is this chart lying to me? Automating the detection of misleading visualizations"](https://arxiv.org/abs/2508.21675), check it out 🔥
 
