@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/github/license/UKPLab/ukp-project-template)](https://opensource.org/licenses/Apache-2.0)
 [![Python Versions](https://img.shields.io/badge/Python-3.10-blue.svg?style=flat&logo=python&logoColor=white)](https://www.python.org/)
 
-This repository contains the implementation of the arXiv preprint: [Protecting Multimodal LLMs against misleading visualizations](https://arxiv.org/abs/2502.20503). The code is released under an **Apache 2.0** license.
+This repository contains the implementation of the ACL 2026 Main conference paper: [Protecting Multimodal LLMs against misleading visualizations](https://arxiv.org/abs/2502.20503). The code is released under an **Apache 2.0** license.
 
 Contact person: [Jonathan Tonglet](mailto:jonathan.tonglet@tu-darmstadt.de) 
 
