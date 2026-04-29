@@ -163,11 +163,11 @@ $ python src/evaluate.py --results_folder results_qa --output_file results_qa.cs
 If you find this work relevant to your research or use this code in your work, please cite our paper as follows:
 
 ```bibtex 
-@article{tonglet2025misleadingvisualizations,
+@inproceedings{tonglet2026misleadingvisualizations,
   title={Protecting multimodal LLMs against misleading visualizations},
   author={Tonglet, Jonathan and Tuytelaars, Tinne and Moens, Marie-Francine and Gurevych, Iryna},
-  journal={arXiv preprint arXiv:2502.20503},
-  year={2025},
+  booktitle={The 64th Annual Meeting of the Association for Computational Linguistics},
+  year={2026},
   url={https://arxiv.org/abs/2502.20503},
   doi={10.48550/arXiv.2502.20503}
 }
